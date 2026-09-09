@@ -13,8 +13,8 @@ The program also warns when observed altitude is low or the Sun is near the zeni
 
 - [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source.
 - [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to the line-by-line commented source; **documentation only**, not executable source.
-- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — BCA *Currents* article on the TI-81 history, Murdock's achievement, Meeus update and Sun-run-Sun backup navigation.
-- [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — choosing, preparing, storing, installing and testing a used TI-84 Plus.
+- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — **draft article intended for possible submission to BCA *Currents***, covering the TI-81 history, Murdock's achievement, the Meeus update and Sun-run-Sun backup navigation.
+- [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — **draft companion article intended for possible submission to BCA *Currents***, covering selection, preparation, storage, installation and testing of a used TI-84 Plus.
 - [`docs/test-cases.md`](docs/test-cases.md) — four historical test cases and the USNO comparison.
 - [`docs/sources.md`](docs/sources.md) — historical, astronomical, refraction, validation and TI references.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — bibliographic details and links to online copies of William S. Murdock's March 1996 *Cruising World* TI-81 article; copyrighted scans are not redistributed here.
