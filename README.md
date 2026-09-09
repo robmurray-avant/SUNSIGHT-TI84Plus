@@ -1,47 +1,91 @@
 # SUNSIGHT for the TI-84 Plus
 
-SUNSIGHT is a dedicated Sun-sight reduction program for the **plain monochrome Texas Instruments TI-84 Plus**.
+SUNSIGHT is a Sun-sight reduction program for the **plain monochrome Texas Instruments TI-84 Plus**.
 
-It was written and tested on the TI-84 Plus as a simple, independent backup for offshore celestial navigation. Enter date/UTC, position, sextant altitude, Sun limb, index error, height of eye, pressure and temperature. The normal result is deliberately limited to:
+It is intended as a simple, independent celestial-navigation backup for offshore use. The program was written and tested on the TI-84 Plus and is deliberately limited to the Sun.
 
-- intercept, to one decimal nautical mile, **To** or **From**
-- **Zn**, to one decimal degree
-
-The program also warns when observed altitude is low or the Sun is near the zenith.
-
-## Files
-
-- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source.
-- [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to the line-by-line commented source; **documentation only**, not executable source.
-- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — **draft article intended for possible submission to BCA *Currents***, covering the TI-81 history, Murdock's achievement, the Meeus update and Sun-run-Sun backup navigation.
-- [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — **draft companion article intended for possible submission to BCA *Currents***, covering selection, preparation, storage, installation and testing of a used TI-84 Plus.
-- [`docs/test-cases.md`](docs/test-cases.md) — four historical test cases and the USNO comparison.
-- [`docs/sources.md`](docs/sources.md) — historical, astronomical, refraction, validation and TI references.
-- [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — bibliographic details and links to online copies of William S. Murdock's March 1996 *Cruising World* TI-81 article; copyrighted scans are not redistributed here.
-
-## Program size
-
-The tested TI-84 Plus program occupies **6,734 bytes** on the calculator. Murdock's original TI-81 program occupied **2,259 bytes**.
-
-## Standard test — Case A
-
-- Date: 8 Apr 1950
-- UTC: 18:43:28
-- Position: N 62°28.2′, E 000°18.8′
-- Hs: 1°38.2′
-- Lower limb
-- Index error: 10.2′ off arc
-- Height of eye: 2.2 m
-- Pressure: 1050 mb/hPa
-- Temperature: 2 °C
-
-Expected operational result:
+Enter the sight data and SUNSIGHT returns only the two values normally needed to plot the line of position:
 
 ```text
 Intercept  11.3 To
 Zn         282.8
 ```
 
+The intercept is shown to 0.1 nautical mile and Zn to 0.1°. The program also gives caution messages for low-altitude sights and sights close to the zenith.
+
+## What this project is
+
+This repository contains the tested TI-BASIC program, documentation explaining how it works, historical material on the TI-81 program that inspired it, and test cases used to validate the new version.
+
+SUNSIGHT is a modern rewrite of the idea behind William S. Murdock's 1996 TI-81 Sun-sight program. Murdock fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The present TI-84 Plus version uses **6,734 bytes** and spends the extra capacity on a Meeus-based solar ephemeris, ΔT handling, refined refraction, input checking, clearer prompts and numerical safeguards.
+
+The current program has been checked against four historical examples and against U.S. Naval Observatory celestial-navigation data. Across those four cases, the largest difference from USNO in calculated altitude Hc was about 0.1 minute of arc, and the largest difference in Zn was about 0.03°.
+
+## Download and install
+
+Use [`SUNSIGHT.txt`](SUNSIGHT.txt) as the executable source.
+
+It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version into the calculator.
+
+Before relying on the program, run the supplied test cases on the actual calculator you intend to carry aboard.
+
+## Repository contents
+
+- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source.
+- [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to a line-by-line explanation of the code.
+- [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
+- [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
+- [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
+- [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and links for Murdock's March 1996 *Cruising World* article, **“Create Your Own Sun-Sight Reduction Program.”** Copyrighted magazine scans are not redistributed here.
+- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — a **draft article** about the project, intended for possible submission to the Bluewater Cruising Association's *Currents* magazine.
+- [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — a **draft companion article** on selecting, preparing, storing and testing a TI-84 Plus for this use.
+
+The two article files are drafts only. They have not been published by BCA *Currents*.
+
+## Required inputs
+
+SUNSIGHT asks for:
+
+- date and UTC
+- latitude and longitude
+- sextant altitude Hs
+- lower or upper limb
+- index error, on or off the arc
+- height of eye in metres
+- atmospheric pressure in mb/hPa
+- temperature in °C
+
+North/South, East/West, limb and index-error direction are entered as numbered choices to reduce sign mistakes.
+
+## Standard acceptance test — Case A
+
+Enter:
+
+- Date: **8 Apr 1950**
+- UTC: **18:43:28**
+- Position: **N 62°28.2′, E 000°18.8′**
+- Hs: **1°38.2′**
+- Limb: **lower**
+- Index error: **10.2′ off the arc**
+- Height of eye: **2.2 m**
+- Pressure: **1050 mb/hPa**
+- Temperature: **2 °C**
+
+Expected result:
+
+```text
+Intercept  11.3 To
+Zn         282.8
+```
+
+Cases B–D are in [`docs/test-cases.md`](docs/test-cases.md).
+
+## Why Sun only?
+
+For a cruiser whose celestial-navigation skills may be rusty, the Sun is a particularly useful backup body. It is easy to identify, normally gives a clear daytime horizon, and two sights separated by time can be used for a **Sun-run-Sun running fix** by advancing the first line of position by the vessel's course and distance before plotting the second.
+
+The aim is not to replace a full celestial-navigation practice. It is to provide a compact, independent way of reducing Sun sights when normal electronic navigation is unavailable.
+
 ## Important
 
-This software is intended as an educational and backup navigation tool. Test the program and your calculator against the supplied cases before relying on it, and retain competent navigation practice and independent means of determining position.
+This software is an educational and backup navigation tool. Test it independently, maintain competent navigation practice, and carry other independent means of determining position. A correct calculation cannot compensate for incorrect sight data, poor time, a bad DR position, or an incorrectly entered value.
