@@ -17,7 +17,7 @@ The program also warns when observed altitude is low or the Sun is near the zeni
 - [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — choosing, preparing, storing, installing and testing a used TI-84 Plus.
 - [`docs/test-cases.md`](docs/test-cases.md) — four historical test cases and the USNO comparison.
 - [`docs/sources.md`](docs/sources.md) — historical, astronomical, refraction, validation and TI references.
-- [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — reference folder for the four page images of William S. Murdock's March 1996 *Cruising World* TI-81 article.
+- [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — bibliographic details and links to online copies of William S. Murdock's March 1996 *Cruising World* TI-81 article; copyrighted scans are not redistributed here.
 
 ## Program size
 
