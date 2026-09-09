@@ -1,0 +1,584 @@
+PROGRAM:SUNSIGHT
+Float
+ClrHome
+Degree
+If dim(L₁)<71
+71→dim(L₁)
+
+Lbl A3
+ClrHome
+Disp "Date / UTC time"
+Disp "1=View"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=1
+Goto A4
+If P=2
+Goto A6
+If P=3
+Goto A5
+Goto A3
+
+Lbl A4
+ClrHome
+Output(1,1,"Date / UTC time")
+Output(2,1,"Year")
+Output(2,10,A)
+Output(3,1,"Month")
+Output(3,10,B)
+Output(4,1,"Day")
+Output(4,10,C)
+Output(5,1,"UTC hour")
+Output(5,10,D)
+Output(6,1,"UTC min")
+Output(6,10,E)
+Output(7,1,"UTC sec")
+Output(7,10,F)
+Pause 
+ClrHome
+Disp "Date / UTC time"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=2
+Goto A6
+If P=3
+Goto A5
+Goto A4
+
+Lbl A5
+ClrHome
+Input "Year ",A
+Input "Month ",B
+Input "Day ",C
+Input "UTC hour ",D
+Input "UTC min ",E
+Input "UTC sec ",F
+Goto A4
+
+Lbl A6
+ClrHome
+Disp "Position"
+Disp "1=View"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=1
+Goto A7
+If P=2
+Goto A9
+If P=3
+Goto A8
+Goto A6
+
+Lbl A7
+ClrHome
+int(abs(G))→P
+round((abs(G)-P)60,4)→Q
+Output(1,1,"Position")
+Output(2,1,"Lat deg")
+Output(2,10,P)
+Output(3,1,"Lat min")
+Output(3,10,Q)
+If G=0
+Output(4,1,"North")
+If G>0
+Output(4,1,"North")
+If G<0
+Output(4,1,"South")
+int(abs(H))→P
+round((abs(H)-P)60,4)→Q
+Output(6,1,"Lon deg")
+Output(6,10,P)
+Output(7,1,"Lon min")
+Output(7,10,Q)
+If H=0
+Output(8,1,"East")
+If H>0
+Output(8,1,"East")
+If H<0
+Output(8,1,"West")
+Pause 
+ClrHome
+Disp "Position"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=2
+Goto A9
+If P=3
+Goto A8
+Goto A7
+
+Lbl A8
+ClrHome
+Input "Lat deg ",P
+Input "Lat min ",Q
+abs(P)+abs(Q)/60→G
+ClrHome
+Disp "Latitude"
+Disp "1=North"
+Disp "2=South"
+Input "Choice ",P
+If P<1
+Goto A8
+If P>2
+Goto A8
+If P=2
+0-G→G
+
+ClrHome
+Input "Lon deg ",P
+Input "Lon min ",Q
+abs(P)+abs(Q)/60→H
+ClrHome
+Disp "Longitude"
+Disp "1=East"
+Disp "2=West"
+Input "Choice ",P
+If P<1
+Goto A8
+If P>2
+Goto A8
+If P=2
+0-H→H
+Goto A7
+
+Lbl A9
+ClrHome
+Disp "Sextant"
+Disp "1=View"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=1
+Goto B0
+If P=2
+Goto B2
+If P=3
+Goto B1
+Goto A9
+
+Lbl B0
+ClrHome
+Output(1,1,"Sextant")
+Output(2,1,"Hs deg")
+Output(2,10,I)
+Output(3,1,"Hs min")
+Output(3,10,J)
+If K=1
+Output(5,1,"Lower limb")
+If K=2
+Output(5,1,"Upper limb")
+Pause 
+ClrHome
+Disp "Sextant"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=2
+Goto B2
+If P=3
+Goto B1
+Goto B0
+
+Lbl B1
+ClrHome
+Input "Hs deg ",I
+Input "Hs min ",J
+abs(I)→I
+abs(J)→J
+ClrHome
+Disp "Sun limb"
+Disp "1=Lower"
+Disp "2=Upper"
+Input "Choice ",K
+If K<1
+Goto B1
+If K>2
+Goto B1
+Goto B0
+
+Lbl B2
+ClrHome
+Disp "Corrections"
+Disp "1=View"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=1
+Goto B3
+If P=2
+Goto B8
+If P=3
+Goto B4
+Goto B2
+
+Lbl B3
+ClrHome
+Output(1,1,"Corrections")
+Output(2,1,"Index error min")
+Output(2,12,abs(L))
+If L=0
+Output(3,1,"Off arc")
+If L>0
+Output(3,1,"Off arc")
+If L<0
+Output(3,1,"On arc")
+Output(5,1,"Eye height m")
+Output(5,12,M)
+Output(6,1,"Pressure mb/hPa")
+Output(6,12,N)
+Output(7,1,"Temp C")
+Output(7,12,O)
+Pause 
+ClrHome
+Disp "Corrections"
+Disp "2=Accept"
+Disp "3=Change"
+Input "Choice ",P
+If P=2
+Goto B8
+If P=3
+Goto B4
+Goto B3
+
+Lbl B4
+ClrHome
+Input "Index error min ",L
+abs(L)→L
+ClrHome
+Disp "Index error"
+Disp "1=Off arc"
+Disp "2=On arc"
+Input "Choice ",P
+If P=1
+Goto B5
+If P=2
+Goto B6
+Goto B4
+
+Lbl B5
+abs(L)→L
+Goto B7
+
+Lbl B6
+0-abs(L)→L
+
+Lbl B7
+ClrHome
+Input "Eye height m ",M
+Input "Pressure mb/hPa ",N
+Input "Temp C ",O
+Goto B3
+
+
+Lbl B8
+
+If A<1900
+Goto E7
+If A>2049
+Goto E7
+If B<1
+Goto E8
+If B>12
+Goto E8
+If C<1
+Goto E9
+If C>31
+Goto E9
+If D<0
+Goto F0
+If D>23
+Goto F0
+If E<0
+Goto F1
+If E>59
+Goto F1
+If F<0
+Goto F2
+If F>59.999
+Goto F2
+If abs(G)>90
+Goto F3
+If abs(H)>180
+Goto F4
+If I<0
+Goto F5
+If I>90
+Goto F5
+If J<0
+Goto F5
+If J>59.999
+Goto F5
+If K<1
+Goto F5
+If K>2
+Goto F5
+If M<0
+Goto F6
+If N<1
+Goto F6
+Goto B9
+
+Lbl B9
+Float
+A→L₁(1)
+B→L₁(2)
+If B<3
+A-1→L₁(1)
+If B<3
+B+12→L₁(2)
+int(L₁(1)/100)→L₁(3)
+2-L₁(3)+int(L₁(3)/4)→L₁(4)
+int(365.25(L₁(1)+4716))+int(30.6001(L₁(2)+1))+C+(D+E/60+F/3600)/24+L₁(4)-1524.5→L₁(5)
+A+(B-.5)/12→L₁(6)
+If L₁(6)<1920
+Goto C0
+If L₁(6)<1941
+Goto C1
+If L₁(6)<1961
+Goto C2
+If L₁(6)<1986
+Goto C3
+If L₁(6)<2005
+Goto C4
+Goto C5
+
+Lbl C0
+L₁(6)-1900→L₁(7)
+0-2.79+1.494119L₁(7)-.0598939L₁(7)^2+.0061966L₁(7)^3-.000197L₁(7)^4→L₁(8)
+Goto C6
+
+Lbl C1
+L₁(6)-1920→L₁(7)
+21.2+.84493L₁(7)-.0761L₁(7)^2+.0020936L₁(7)^3→L₁(8)
+Goto C6
+
+Lbl C2
+L₁(6)-1950→L₁(7)
+29.07+.407L₁(7)-L₁(7)^2/233+L₁(7)^3/2547→L₁(8)
+Goto C6
+
+Lbl C3
+L₁(6)-1975→L₁(7)
+45.45+1.067L₁(7)-L₁(7)^2/260-L₁(7)^3/718→L₁(8)
+Goto C6
+
+Lbl C4
+L₁(6)-2000→L₁(7)
+63.86+.3345L₁(7)-.060374L₁(7)^2+.0017275L₁(7)^3+.000651814L₁(7)^4+.00002373599L₁(7)^5→L₁(8)
+Goto C6
+
+Lbl C5
+L₁(6)-2000→L₁(7)
+62.92+.32217L₁(7)+.005589L₁(7)^2→L₁(8)
+
+Lbl C6
+L₁(5)+L₁(8)/86400→L₁(9)
+(L₁(9)-2451545)/36525→L₁(10)
+(L₁(5)-2451545)/36525→L₁(11)
+280.46646+36000.76983L₁(10)+.0003032L₁(10)^2→L₁(12)
+L₁(12)-360int(L₁(12)/360)→L₁(13)
+357.52911+35999.05029L₁(10)-.0001537L₁(10)^2→L₁(14)
+L₁(14)-360int(L₁(14)/360)→L₁(15)
+.016708634-.000042037L₁(10)-.0000001267L₁(10)^2→L₁(16)
+(1.914602-.004817L₁(10)-.000014L₁(10)^2)sin(L₁(15))+(.019993-.000101L₁(10))sin(2L₁(15))+.000289sin(3L₁(15))→L₁(17)
+L₁(13)+L₁(17)→L₁(18)
+L₁(18)-360int(L₁(18)/360)→L₁(19)
+125.04-1934.136L₁(10)→L₁(20)
+L₁(19)-.00569-.00478sin(L₁(20))→L₁(21)
+L₁(21)-360int(L₁(21)/360)→L₁(22)
+23+26/60+21.448/3600-(46.815L₁(10)+.00059L₁(10)^2-.001813L₁(10)^3)/3600→L₁(23)
+L₁(23)+.00256cos(L₁(20))→L₁(24)
+cos(L₁(24))sin(L₁(22))→L₁(25)
+cos(L₁(22))→L₁(26)
+
+If L₁(26)=0
+Goto C7
+tan(L₁(25)/L₁(26))→L₁(27)
+Goto C8
+Lbl C7
+90→L₁(27)
+If L₁(25)<0
+0-90→L₁(27)
+Lbl C8
+L₁(27)→L₁(28)
+If L₁(26)<0
+L₁(27)+180→L₁(28)
+L₁(28)-360int(L₁(28)/360)→L₁(29)
+sin(L₁(24))sin(L₁(22))→L₁(69)
+L₁(69)→L₁(70)
+If L₁(70)>1
+1→L₁(70)
+If L₁(70)<0-1
+0-1→L₁(70)
+sin(L₁(70))→L₁(30)
+1.000001018(1-L₁(16)^2)/(1+L₁(16)cos(L₁(15)+L₁(17)))→L₁(31)
+218.3165+481267.8813L₁(10)→L₁(32)
+(0-17.2sin(L₁(20))-1.32sin(2L₁(13))-.23sin(2L₁(32))+.21sin(2L₁(20)))/3600→L₁(33)
+280.46061837+360.98564736629(L₁(5)-2451545)+.000387933L₁(11)^2-L₁(11)^3/38710000→L₁(34)
+L₁(34)-360int(L₁(34)/360)→L₁(35)
+L₁(35)+L₁(33)cos(L₁(24))→L₁(36)
+L₁(36)-360int(L₁(36)/360)→L₁(37)
+L₁(37)-L₁(29)→L₁(38)
+L₁(38)-360int(L₁(38)/360)→L₁(39)
+L₁(39)+H→L₁(40)
+L₁(40)-360int(L₁(40)/360)→L₁(41)
+sin(G)sin(L₁(30))+cos(G)cos(L₁(30))cos(L₁(41))→L₁(42)
+L₁(42)→L₁(71)
+If L₁(71)>1
+1→L₁(71)
+If L₁(71)<0-1
+0-1→L₁(71)
+sin(L₁(71))→L₁(43)
+sin(L₁(41))→L₁(44)
+cos(L₁(41))sin(G)-tan(L₁(30))cos(G)→L₁(45)
+
+If L₁(45)=0
+Goto C9
+tan(L₁(44)/L₁(45))→L₁(46)
+Goto D0
+Lbl C9
+90→L₁(46)
+If L₁(44)<0
+0-90→L₁(46)
+Lbl D0
+L₁(46)→L₁(47)
+If L₁(45)<0
+L₁(46)+180→L₁(47)
+L₁(47)+180→L₁(48)
+L₁(48)-360int(L₁(48)/360)→L₁(49)
+
+I+J/60→L₁(50)
+L/60→L₁(51)
+1.76√(M)/60→L₁(52)
+L₁(50)+L₁(51)-L₁(52)→L₁(53)
+
+If L₁(53)>0-1
+Goto D1
+ClrHome
+Disp "Altitude too low"
+Disp "For refraction"
+Pause 
+Goto A9
+Lbl D1
+
+1/tan(L₁(53)+7.31/(L₁(53)+4.4))→L₁(54)
+0-.06sin(14.7L₁(54)+13)→L₁(55)
+L₁(54)+L₁(55)→L₁(56)
+((N-80)/930)/(1+.00008(L₁(54)+39)(O-10))→L₁(57)
+L₁(56)L₁(57)→L₁(58)
+L₁(58)/60→L₁(59)
+L₁(53)-L₁(59)→L₁(60)
+(959.63/3600)/L₁(31)→L₁(61)
+If K=1
+L₁(61)→L₁(62)
+If K=2
+0-L₁(61)→L₁(62)
+L₁(60)+L₁(62)→L₁(63)
+(8.794/3600)cos(L₁(63))/L₁(31)→L₁(64)
+L₁(63)+L₁(64)→L₁(65)
+60(L₁(65)-L₁(43))→L₁(66)
+abs(L₁(66))→L₁(67)
+
+ClrHome
+Fix 1
+Output(1,1,"Sun sight")
+Output(3,1,"Intercept NM")
+Output(4,1,L₁(67))
+Output(4,10,"To")
+If L₁(66)<0
+Output(4,10,"From")
+Output(6,1,"Zn")
+Output(6,6,L₁(49))
+Pause 
+Float
+If L₁(53)<5
+Goto H0
+If L₁(43)>87
+Goto H1
+Goto A3
+
+Lbl H0
+ClrHome
+Disp "Low altitude"
+Disp "USE WITH CAUTION"
+Pause 
+If L₁(43)>87
+Goto H1
+Goto A3
+
+Lbl H1
+ClrHome
+Disp "Near zenith"
+Disp "USE Zn WITH CAUTION"
+Pause 
+Goto A3
+
+Lbl E7
+ClrHome
+Disp "Invalid year"
+Disp A
+Pause 
+Goto A5
+
+Lbl E8
+ClrHome
+Disp "Invalid month"
+Disp B
+Pause 
+Goto A5
+
+Lbl E9
+ClrHome
+Disp "Invalid day"
+Disp C
+Pause 
+Goto A5
+
+Lbl F0
+ClrHome
+Disp "Invalid hour"
+Disp D
+Pause 
+Goto A5
+
+Lbl F1
+ClrHome
+Disp "Invalid min"
+Disp E
+Pause 
+Goto A5
+
+Lbl F2
+ClrHome
+Disp "Invalid sec"
+Disp F
+Pause 
+Goto A5
+
+Lbl F3
+ClrHome
+Disp "Invalid lat"
+Pause 
+Goto A8
+
+Lbl F4
+ClrHome
+Disp "Invalid lon"
+Pause 
+Goto A8
+
+Lbl F5
+ClrHome
+Disp "Invalid sextant"
+Pause 
+Goto B1
+
+Lbl F6
+ClrHome
+Disp "Invalid corrections"
+Pause 
+Goto B4
