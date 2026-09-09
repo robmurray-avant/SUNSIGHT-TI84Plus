@@ -2,9 +2,7 @@
 
 SUNSIGHT is a dedicated Sun-sight reduction program for the **plain monochrome Texas Instruments TI-84 Plus**.
 
-It was written and tested on the TI-84 Plus as a simple, independent backup for offshore celestial navigation.
-Enter date/UTC, position, sextant altitude, Sun limb, index error, height of eye, pressure and temperature.
-The normal result is deliberately limited to:
+It was written and tested on the TI-84 Plus as a simple, independent backup for offshore celestial navigation. Enter date/UTC, position, sextant altitude, Sun limb, index error, height of eye, pressure and temperature. The normal result is deliberately limited to:
 
 - intercept, to one decimal nautical mile, **To** or **From**
 - **Zn**, to one decimal degree
@@ -13,15 +11,17 @@ The program also warns when observed altitude is low or the Sun is near the zeni
 
 ## Files
 
-- `SUNSIGHT.txt` — exact tested TI Connect CE source.
-- `SUNSIGHT_ANNOTATED.md` — the same program explained line by line; **documentation only**, not executable source.
-- `docs/test-cases.md` — four historical test cases and the USNO comparison.
-- `docs/original-cruising-world-1996/` — four images of William S. Murdoch's March 1996 *Cruising World* TI-81 article.
+- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source.
+- [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to the line-by-line commented source; **documentation only**, not executable source.
+- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — BCA *Currents* article on the TI-81 history, Murdock's achievement, Meeus update and Sun-run-Sun backup navigation.
+- [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — choosing, preparing, storing, installing and testing a used TI-84 Plus.
+- [`docs/test-cases.md`](docs/test-cases.md) — four historical test cases and the USNO comparison.
+- [`docs/sources.md`](docs/sources.md) — historical, astronomical, refraction, validation and TI references.
+- [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — reference folder for the four page images of William S. Murdock's March 1996 *Cruising World* TI-81 article.
 
 ## Program size
 
-The tested TI-84 Plus program occupies **6,734 bytes** on the calculator.
-Murdoch's original TI-81 program occupied **2,259 bytes**.
+The tested TI-84 Plus program occupies **6,734 bytes** on the calculator. Murdock's original TI-81 program occupied **2,259 bytes**.
 
 ## Standard test — Case A
 
