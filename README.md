@@ -23,25 +23,25 @@ The current program has been checked against four historical examples and agains
 
 ## Download and install
 
-Use (SUNSIGHT.8xp) as the executable source.
+Use (`SUNSIGHT.8xp`) as the executable source.
 
-It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version or the .txt vesion into the calculator.
+It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version or the .txt version into the calculator.
 
 Before relying on the program, run the supplied test cases on the actual calculator you intend to carry aboard.
 
 ## Repository contents
 
-- ['SUNSIGHT.8xp'](SUNSIGHT.8xp) the executable source for copying to the target TI-84 Plus calculator with the TI Connect CE software
+- [`SUNSIGHT.8xp`](SUNSIGHT.8xp) the executable source for copying to the target TI-84 Plus calculator with the TI Connect CE software
 - [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source as a text file.
 - [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to a line-by-line explanation of the code.
 - [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
 - [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
 - [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and links for Murdock's March 1996 *Cruising World* article, **“Create Your Own Sun-Sight Reduction Program.”** Copyrighted magazine scans are not redistributed here.
-- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — a **draft article** about the project, intended for possible submission to the Bluewater Cruising Association's *Currents* magazine.
+- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — a **draft article** about the project, intended for possible submission to magazines, etc.
 - [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — a **draft companion article** on selecting, preparing, storing and testing a TI-84 Plus for this use.
 
-The two article files are drafts only. They have not been published by BCA *Currents*.
+The two article files are drafts only. They have not been published.
 
 ## Required inputs
 
