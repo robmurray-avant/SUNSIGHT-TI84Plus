@@ -23,7 +23,7 @@ The current program has been checked against four historical examples and agains
 
 ## Download and install
 
-Use (`SUNSIGHT.8xp`) as the executable source.
+Use [`SUNSIGHT.8xp`](SUNSIGHT.8xp) as the executable source.
 
 It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version or the .txt version into the calculator.
 
