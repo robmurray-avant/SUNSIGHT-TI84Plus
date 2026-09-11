@@ -23,15 +23,16 @@ The current program has been checked against four historical examples and agains
 
 ## Download and install
 
-Use [`SUNSIGHT.txt`](SUNSIGHT.txt) as the executable source.
+Use (SUNSIGHT.8xp) as the executable source.
 
-It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version into the calculator.
+It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version or the .txt vesion into the calculator.
 
 Before relying on the program, run the supplied test cases on the actual calculator you intend to carry aboard.
 
 ## Repository contents
 
-- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source.
+- ['SUNSIGHT.8xp'](SUNSIGHT.8xp) the executable source for copying to the target TI-84 Plus calculator with the TI Connect CE software
+- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source as a text file.
 - [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to a line-by-line explanation of the code.
 - [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
 - [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
