@@ -32,7 +32,7 @@ Before relying on the program, run the supplied test cases on the actual calcula
 ## Repository contents
 
 - [`SUNSIGHT.8xp`](SUNSIGHT.8xp) the executable source for copying to the target TI-84 Plus calculator with the TI Connect CE software
-- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI Connect CE source as a text file.
+- [`SUNSIGHT.txt`](SUNSIGHT.txt) — exact tested TI-BASIC source as a text file.
 - [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to a line-by-line explanation of the code.
 - [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
 - [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
