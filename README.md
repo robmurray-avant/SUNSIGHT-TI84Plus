@@ -83,6 +83,6 @@ For a cruiser whose celestial-navigation skills may be rusty, the Sun is a parti
 
 The aim is not to replace a full celestial-navigation practice. It is to provide a compact, independent way of reducing Sun sights when normal electronic navigation is unavailable.
 
-## Important
+## Disclaimer:
 
-This software is an educational and backup navigation tool. Test it independently, maintain competent navigation practice, and carry other independent means of determining position. A correct calculation cannot compensate for incorrect sight data, poor time, a bad DR position, or an incorrectly entered value.
+This software is an educational and backup navigation tool, not a substitute for experience, education, judgment or common sense. While I have tested it extensively against the U.S. Naval Observatory’s “Celestial Navigation Data for Assumed Position and Time” and other authoritative sources, and it generally behaves itself and delivers accurate results, I cannot guarantee perfection (just ask Debra). A correct calculation will not save you from bad sights, a watch that has wandered off UTC, a rubbish DR, or classic “I typed 62° instead of 26°” type errors. Garbage in, garbage out remains undefeated. Test it yourself. Keep and use other independent means of finding out where you are. And remember: this program will not make you taller or better looking, alleviate hangover symptoms, or prevent you from hitting something solid if you ignore the results. Use at your own risk, preferably while (reasonably) sober. *****
