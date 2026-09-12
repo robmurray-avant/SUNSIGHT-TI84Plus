@@ -4,6 +4,8 @@
 
 *By Rob Murray, Avant*
 
+*Copyright © 2026 Rob Murray. All rights reserved.*
+
 Celestial navigation has always carried a certain air of virtuous suffering. The *Nautical Almanac*, the sight reduction tables, the interpolation, and the quiet dread of dropping a sign somewhere between “GHA” and “intercept” have persuaded more than a few navigators that the sextant serves best as cabin decoration—preferably somewhere it can’t fall on your foot at 0300.
 
 I have always liked celestial navigation. I also have enough self-awareness to know that liking something and being competent at it after several years of not doing it are quite different things. Celestial is one of those skills that seems easy and perfectly obvious while you are practising it and strangely difficult and foreign when you pull the books out again years later.
