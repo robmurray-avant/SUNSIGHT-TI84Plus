@@ -38,10 +38,6 @@ Before relying on the program, run the supplied test cases on the actual calcula
 - [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
 - [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and links for Murdock's March 1996 *Cruising World* article, **“Create Your Own Sun-Sight Reduction Program.”** Copyrighted magazine scans are not redistributed here.
-- [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — a **draft article** about the project, intended for possible submission to magazines, etc.
-- [`docs/article-2-preparing-ti84plus.md`](docs/article-2-preparing-ti84plus.md) — a **draft companion article** on selecting, preparing, storing and testing a TI-84 Plus for this use.
-
-The two article files are drafts only. They have not been published.
 
 ## Required inputs
 
