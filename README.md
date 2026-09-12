@@ -47,6 +47,8 @@ Do **not** paste `SUNSIGHT.txt` or any annotated file into the calculator. The `
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and authorized online links for Murdoch's March 1996 *Cruising World* article. Copyrighted magazine scans are not redistributed here.
 - [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — draft article on the program, its development and intended use.
 - [`CHANGELOG.md`](CHANGELOG.md) — public version history.
+- [`LICENSE`](LICENSE) — MIT License for the SUNSIGHT software code.
+- [`COPYRIGHT.md`](COPYRIGHT.md) — copyright and licensing scope for the repository.
 
 ## Required inputs
 
@@ -105,6 +107,14 @@ A bug-report template is provided automatically when opening an issue.
 For a cruiser whose celestial-navigation skills may be rusty, the Sun is a particularly useful backup body. It is easy to identify, normally gives a clear daytime horizon, and two sights separated by time can be used for a **Sun-run-Sun running fix** by advancing the first line of position by the vessel's course and distance before plotting the second.
 
 The aim is not to replace a full celestial-navigation practice. It is to provide a compact, independent way of reducing Sun sights when normal electronic navigation is unavailable.
+
+## Copyright and license
+
+The **SUNSIGHT software code** is Copyright © 2026 Rob Murray and is licensed under the **MIT License**. This includes `SUNSIGHT.8xp`, `SUNSIGHT.txt`, and reproductions or excerpts of the SUNSIGHT code in the annotated-source documentation. See [`LICENSE`](LICENSE).
+
+The **articles, explanatory documentation, historical notes and other non-code material** in this repository are Copyright © 2026 Rob Murray, **all rights reserved**, unless otherwise stated. Code excerpts embedded in documentation remain covered by the MIT License; the surrounding prose does not. See [`COPYRIGHT.md`](COPYRIGHT.md) for the full scope statement.
+
+Third-party material remains subject to the rights of its respective owners.
 
 ## Disclaimer
 
