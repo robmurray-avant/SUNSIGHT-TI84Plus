@@ -53,7 +53,7 @@ SUNSIGHT asks for:
 - atmospheric pressure in mb/hPa
 - temperature in °C
 
-North/South, East/West, limb and index-error direction are entered as numbered choices to reduce sign mistakes.
+North/South, East/West, limb and index-error direction are entered as numbered choices to reduce the chance of sign mistakes.
 
 ## Standard acceptance test — Case A
 
