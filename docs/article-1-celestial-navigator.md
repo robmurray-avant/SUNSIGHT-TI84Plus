@@ -50,10 +50,15 @@ Skills get rusty; a program that streamlines and reduces the procedural load is 
 Most of us do not practice celestial navigation every week. The procedures fade. The almanac feels foreign. Getting the annual updated edition is a pain. Traditional sight reduction is powerful but slow and unforgiving when you are out of practice. A simple arithmetic slip after a long absence can produce a confidently wrong answer, and there is nothing quite like the sinking feeling of realizing your carefully plotted fix puts you in the middle of the wrong ocean.
 
 Task      Traditional method	    With SUNSIGHT
+
 Almanac look-ups & interpolation	    5–10+ minutes	    None
+
 Corrections by hand	    Several minutes	    Built-in
+
 Sight reduction	    5–15 minutes	    Instant
+
 Risk of arithmetic error	    Real	    Much lower
+
 Typical time after the sight	      15–30+ minutes	    2–4 minutes
 
 Because the time and effort to reduce the sights is so quick and easy you can take and reduce multiple sights and toss out outliers. 
