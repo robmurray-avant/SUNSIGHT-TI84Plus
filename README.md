@@ -19,6 +19,8 @@ The intercept is shown to 0.1 nautical mile and Zn to 0.1°. The program also gi
 
 SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The present TI-84 Plus version occupies **6,734 bytes on the calculator** and spends the extra capacity on a Meeus-based solar ephemeris, ΔT handling, refined refraction, input checking, clearer prompts and numerical safeguards.
 
+SUNSIGHT is an independent modern implementation inspired by Murdoch's TI-81 work. **Murdoch's original program and article are not included in, or licensed under, the SUNSIGHT MIT License. Copyright in those materials remains with their respective rights holders.**
+
 The current program has been checked against the four historical examples supplied with Murdoch's article and against U.S. Naval Observatory celestial-navigation data. Across Cases A–D, the largest difference in calculated altitude Hc was about **0.10 minute of arc**, and the largest difference in Zn was about **0.03°**.
 
 Supported dates are **1900 through 2049**.
@@ -111,6 +113,8 @@ The aim is not to replace a full celestial-navigation practice. It is to provide
 ## Copyright and license
 
 The **SUNSIGHT software code** is Copyright © 2026 Rob Murray and is licensed under the **MIT License**. This includes `SUNSIGHT.8xp`, `SUNSIGHT.txt`, and reproductions or excerpts of the SUNSIGHT code in the annotated-source documentation. See [`LICENSE`](LICENSE).
+
+The MIT License applies only to Rob Murray's original SUNSIGHT code. **It does not apply to William S. Murdoch's original TI-81 program, Murdoch's article, or any other third-party material.** Those materials remain subject to the rights of their respective copyright holders.
 
 The **articles, explanatory documentation, historical notes and other non-code material** in this repository are Copyright © 2026 Rob Murray, **all rights reserved**, unless otherwise stated. Code excerpts embedded in documentation remain covered by the MIT License; the surrounding prose does not. See [`COPYRIGHT.md`](COPYRIGHT.md) for the full scope statement.
 
