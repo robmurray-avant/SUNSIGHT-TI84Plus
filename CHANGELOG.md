@@ -11,3 +11,5 @@ Initial public-test version of SUNSIGHT for the **plain monochrome TI-84 Plus**.
 - Installable file: `SUNSIGHT.8xp`.
 - Validated against historical Cases A–D and U.S. Naval Observatory celestial-navigation data.
 - Public documentation includes the human-readable source, line-by-line annotation, installation instructions, sources and validation tables.
+- SUNSIGHT software code released under the MIT License, Copyright © 2026 Rob Murray.
+- Articles and non-code documentation remain Copyright © 2026 Rob Murray, all rights reserved, except where third-party rights are identified.
