@@ -19,13 +19,13 @@ This repository contains the tested TI-BASIC program, documentation explaining h
 
 SUNSIGHT is a modern rewrite of the idea behind William S. Murdock's 1996 TI-81 Sun-sight program. Murdock fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The present TI-84 Plus version uses **6,734 bytes** and spends the extra capacity on a Meeus-based solar ephemeris, ΔT handling, refined refraction, input checking, clearer prompts and numerical safeguards.
 
-The current program has been checked against four historical examples and against U.S. Naval Observatory celestial-navigation data. Across those four cases, the largest difference from USNO in calculated altitude Hc was about 0.1 minute of arc, and the largest difference in Zn was about 0.03°.
+The current program has been checked against the four historical examples provided and against multiple sets of U.S. Naval Observatory celestial-navigation data. Across those four cases, the largest difference from USNO in calculated altitude Hc was about 0.1 minute of arc, and the largest difference in Zn was about 0.03°.
 
 ## Download and install
 
 Use [`SUNSIGHT.8xp`](SUNSIGHT.8xp) as the executable source.
 
-It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version or the .txt version into the calculator.
+It is formatted for transfer with **TI Connect CE**. Do not paste the annotated version or the *.txt version into the calculator. This will induce frustration, sadness and regret.
 
 Before relying on the program, run the supplied test cases on the actual calculator you intend to carry aboard.
 
