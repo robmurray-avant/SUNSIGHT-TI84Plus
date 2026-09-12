@@ -49,18 +49,18 @@ Skills get rusty; a program that streamlines and reduces the procedural load is 
 
 Most of us do not practice celestial navigation every week. The procedures fade. The almanac feels foreign. Getting the annual updated edition is a pain. Traditional sight reduction is powerful but slow and unforgiving when you are out of practice. A simple arithmetic slip after a long absence can produce a confidently wrong answer, and there is nothing quite like the sinking feeling of realizing your carefully plotted fix puts you in the middle of the wrong ocean.
 
-Task	Traditional method	With SUNSIGHT
-Almanac look-ups & interpolation	5–10+ minutes	None
-Corrections by hand	Several minutes	Built-in
-Sight reduction	5–15 minutes	Instant
-Risk of arithmetic error	Real	Much lower
-Typical time after the sight	15–30+ minutes	2–4 minutes
+Task      Traditional method	    With SUNSIGHT
+Almanac look-ups & interpolation	    5–10+ minutes	    None
+Corrections by hand	    Several minutes	    Built-in
+Sight reduction	    5–15 minutes	    Instant
+Risk of arithmetic error	    Real	    Much lower
+Typical time after the sight	      15–30+ minutes	    2–4 minutes
 
 Because the time and effort to reduce the sights is so quick and easy you can take and reduce multiple sights and toss out outliers. 
 
 The calculator does not make you a better navigator. It simply removes most of the places where rusty skills can produce friction, frustration and wrong answers. For dummies like me, that is a genuine improvement.
 
-Sun-run-Sun and the useful noon or near-noon sight
+## Sun-run-Sun and the useful noon or near-noon sight
 
 A single Sun sight gives you a line of position. Two or three sights taken a few hours apart and advanced for the distance run give you a running fix. This “Sun-run-Sun” method remains one of the easiest and most practical techniques available to a small-boat navigator. The Sun is hard to misidentify (it is the really, really bright one in the sky), is available for most of the day, and requires no star identification skills or precomputation. It doesn’t fade in the dawn twilight, and the horizon under it is usually pretty solid all day.
 
@@ -112,6 +112,6 @@ It will not make you infallible. It will not impress the crowd at the yacht club
 
 For dummies like me, that is worth having in the nav drawer.
 
-***** Disclaimer:
+## ***** Disclaimer:
 
 This software is an educational and backup navigation tool, not a substitute for experience, education, judgment or common sense. While I have tested it extensively against the U.S. Naval Observatory’s “Celestial Navigation Data for Assumed Position and Time” and other authoritative sources, and it generally behaves itself and delivers accurate results, I cannot guarantee perfection (just ask Debra). A correct calculation will not save you from bad sights, a watch that has wandered off UTC, a rubbish DR, or classic “I typed 62° instead of 26°” type errors. Garbage in, garbage out remains undefeated. Test it yourself. Keep and use other independent means of finding out where you are. And remember: this program will not make you taller or better looking, alleviate hangover symptoms, or prevent you from hitting something solid if you ignore the results. Use at your own risk, preferably while (reasonably) sober. *****
