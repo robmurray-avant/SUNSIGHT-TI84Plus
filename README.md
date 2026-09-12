@@ -38,7 +38,7 @@ Before relying on the program, run the supplied test cases on the actual calcula
 - [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
 - [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and links for Murdock's March 1996 *Cruising World* article, **“Create Your Own Sun-Sight Reduction Program.”** Copyrighted magazine scans are not redistributed here.
-- [`article-1-celestial-navigator.md/`](article-1-celestial-navigator.md/) — draft article on the program, its development and intended use.
+- [`article-1-celestial-navigator.md`](article-1-celestial-navigator.md) — draft article on the program, its development and intended use.
 
 ## Required inputs
 
