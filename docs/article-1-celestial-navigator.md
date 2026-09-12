@@ -1,4 +1,4 @@
-Sun Sights Without the Almanac
+## Sun Sights Without the Almanac
 
 (A Solution for Dummies Like Me)
 
@@ -10,7 +10,7 @@ I have always liked celestial navigation. I also have enough self-awareness to k
 
 Which is why I have become rather fond of an elderly graphing calculator.
 
-A short history of letting the calculator do the hard part
+## A short history of letting the calculator do the hard part
 
 In March 1996 Cruising World published a practical set of TI-81 programs for sun-sight reduction (using Van Flandern–Pulkkinen solar formulas as arranged by B. Emerson of Her Majesty’s Nautical Almanac Office, a genius named Murdoch shoehorned the process into a calculator with a laughably small storage capacity so that it worked). You can still find the original article here:
 
@@ -34,18 +34,18 @@ https://github.com/robmurray-avant/SUNSIGHT-TI84Plus/blob/main/README.md
 
 And the best part? You don’t have to type it in by hand (the original Murdoch program had to be laboriously entered by hand, a 3 ½ hour exercise in tedium). Download it and transfer it to the calculator with the free ‘TI Connect CE’ software in a couple of minutes. That alone removes a major barrier for the rest of us who are not keen on entering hundreds of lines of code. 
 
-Why the TI-84 Plus?
+## Why the TI-84 Plus?
 
 The TI-84 Plus was chosen deliberately. It is widely available second-hand, cheap, rugged (enough) for boat life, and runs on ordinary AAA batteries for a very long time. It is technologically outdated by modern computing standards, but it remains heavily used in schools, and teachers know the TI-84 Plus series inside and out. Lesson plans, guidebooks, and curricula written decades ago are built around it. It has no Wi-Fi, no Bluetooth, no operating system updates to speak of, and no interest in phoning home. Once the program is loaded, it is a self-contained computational engine that does not depend on satellites, cellular networks, reference tables, or the boat’s electrical system. In an age when almost every other navigation tool is networked or rechargeable, that independence is a feature, not a limitation. This program was developed and tested only on the TI-84 Plus, so look for one of those.
 
-Independent failure modes
+## Independent failure modes
 
 This is the quiet strength of the system. The failure modes of a sextant, a quartz watch, and a battery-powered calculator are almost completely independent of the failure modes of GNSS, GPS, chart plotters, laptops, and phones. A software glitch, a flat house battery, or deliberate GPS disruption will not stop a sextant, a watch and a TI-84 Plus from producing a usable line of position from a Sun sight. That separation of failure modes is exactly what a backup is supposed to provide.
 
 When the chart plotter starts showing positions that make no sense, or the GPS simply drops out, a method that never asks the satellites for anything becomes disproportionately valuable. This is not a replacement for the chart plotter. It is what you reach for when the electronics fail—lightning, total GPS loss, GPS jamming in a conflict-adjacent area, a blank blue screen in mid-ocean, or simply the desire for an independent check (or something to do on watch) on a passage. 
 Skills get rusty; a program that streamlines and reduces the procedural load is a practical answer for ordinary sailors who do not live in the almanac every day (and who would rather not discover how badly their skills have faded in a rising sea).
 
-Why this is useful for ordinary (rusty) sailors
+## Why this is useful for ordinary (rusty) sailors
 
 Most of us do not practice celestial navigation every week. The procedures fade. The almanac feels foreign. Getting the annual updated edition is a pain. Traditional sight reduction is powerful but slow and unforgiving when you are out of practice. A simple arithmetic slip after a long absence can produce a confidently wrong answer, and there is nothing quite like the sinking feeling of realizing your carefully plotted fix puts you in the middle of the wrong ocean.
 
@@ -70,7 +70,7 @@ Earlier and later sights produce differently oriented (more north-south) LOPs, g
 
 Position comes from the running fix: the crossing of the advanced morning and afternoon (or advanced morning and noon) lines. Nothing exotic, just the classic Sun-run-Sun method, made faster and far less tedious by the calculator and far less likely to end in the creative exercise of your sailor’s vocabulary.
 
-What you need
+## What you need
 
 •	A sextant (a functional second-hand Davis plastic or antique EBBCO sextant is a perfectly serviceable, low-cost unit)
 
@@ -78,7 +78,8 @@ What you need
 
 •	A SUNSIGHT-programmed TI-84 Plus
 
-Step-by-step
+## Step-by-step
+
 1.	Take the Sun sight. Note exact UTC time, Hs, limb, and index error.
 2.	Open SUNSIGHT.
 3.	Enter UTC date and time.
@@ -89,7 +90,7 @@ Step-by-step
 
 Repeat later, advance the earlier sight for the distance run, and you have a Sun-run-Sun running fix. The process takes longer to describe than to do.
 
-Acquiring the kit
+## Acquiring the kit
 
 Used TI-84 Plus calculators turn up regularly on Facebook Marketplace, school surplus sales, and online classifieds. Look for working keys, make sure the device has never suffered leaking batteries and has a clear, readable screen; cosmetic perfection is optional. The calculator does not care if it looks like it survived high school. Even new, they’re relatively inexpensive. They are widely available new and are often on sale in back-to-school seasonal sales.
 
@@ -99,7 +100,7 @@ Batteries: Prefer non-rechargeable lithium cells (Energizer Ultimate Lithium or 
 
 Storage: Keep the calculator and watch in a Ziplock bag in a sealed box or dry bag with spare batteries and desiccant. For extra protection, wrap it in a couple of layers of aluminium foil or place it inside a metal tin, creating a simple Faraday cage. Store it away from the boat’s main lightning paths. Power it up occasionally to confirm the program is still there and that you still remember which button does what. Replace or recharge the batteries every year or two (do the 4 AAAs separately from the silver-oxide cell so you don’t inadvertently clear the program from memory). Write the service dates on a bit of masking tape on the package. 
 
-The bottom line
+## The bottom line
 
 Traditional celestial navigation is a fine skill. It is also easy to let slide, and the paper-based methods punish rust with relentless efficiency. Murdoch’s 1996 Cruising World calculator approach (and SUNSIGHT that continues it) offer a low cost, lower-friction way to keep the capability alive.
 
