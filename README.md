@@ -45,6 +45,7 @@ Do **not** paste `SUNSIGHT.txt` or any annotated file into the calculator. The `
 - [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
 - [`docs/INSTALL.md`](docs/INSTALL.md) — installation and acceptance-test instructions.
 - [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
+- [`docs/memory-map.md`](docs/memory-map.md) — A–Z and `L₁` memory map, user-entered values, diagnostic values, and instructions for inspecting stored data.
 - [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and authorized online links for Murdoch's March 1996 *Cruising World* article. Copyrighted magazine scans are not redistributed here.
 - [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — draft article on the program, its development and intended use.
