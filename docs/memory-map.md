@@ -6,7 +6,7 @@ The program dimensions `L₁` to 71 elements. After a completed sight, the value
 
 ## How to inspect stored values
 
-After SUNSIGHT has completed a sight, return to the calculator home screen. If necessary, press `ON` to interrupt the program and choose **Quit**.
+After SUNSIGHT has completed a sight, return to the calculator home screen. If necessary, press `ON` to interrupt the running program; the TI-84 Plus will show `ERR:BREAK`, from which you can choose **Quit**. This is a calculator error-menu choice, not a SUNSIGHT menu item.
 
 - To inspect a letter variable, enter the letter and press `ENTER`. For example, entering `G` displays the stored signed latitude.
 - To inspect a list element, enter `L₁(n)` and press `ENTER`. On the plain TI-84 Plus, `2nd` → `1` inserts `L₁`. For example, `L₁(39)` displays the calculated Sun GHA and `L₁(49)` displays Zn.
@@ -171,4 +171,4 @@ The final plotting values are:
 - `L₁(66)` — signed intercept, positive To / negative From
 - `L₁(67)` — intercept magnitude
 
-This page documents the memory layout of the current public-test SUNSIGHT version. It is intended for troubleshooting, validation and development; future program versions may change the allocation of scratch locations.
+This page documents the memory layout of SUNSIGHT v1.0.0. It is intended for troubleshooting, validation and development; future program versions may change the allocation of scratch locations.
