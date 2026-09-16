@@ -1,8 +1,8 @@
 # Installing SUNSIGHT on a plain TI-84 Plus
 
-SUNSIGHT was written and tested on the **plain monochrome Texas Instruments TI-84 Plus**.
+SUNSIGHT v1.0.0 was written and tested on the **plain monochrome Texas Instruments TI-84 Plus**.
 
-The preferred installation file is [`SUNSIGHT.8xp`](../SUNSIGHT.8xp). Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` into the calculator unless you specifically understand and intend to deal with TI-BASIC tokenization details.
+The preferred installation file is [`SUNSIGHT.8xp`](../SUNSIGHT.8xp). The released program occupies **6,761 bytes on the calculator** and installs under the program name `SUNSIGHT`. Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` into the calculator unless you specifically understand and intend to deal with TI-BASIC tokenization details.
 
 ## Installation
 
@@ -41,7 +41,7 @@ The low-Sun caution is expected in Case A because the calculated apparent altitu
 
 If your calculator does not produce that result, do not rely on the installation until the problem is understood.
 
-Cases B–D are in [`test-cases.md`](test-cases.md).
+Additional historical and modern validation cases are in [`test-cases.md`](test-cases.md).
 
 ## Supported range
 
