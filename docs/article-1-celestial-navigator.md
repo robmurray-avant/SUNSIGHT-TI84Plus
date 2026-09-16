@@ -14,7 +14,7 @@ Which is why I have become rather fond of an elderly graphing calculator.
 
 ## A short history of letting the calculator do the hard part
 
-In March 1996 *Cruising World* published a practical set of TI-81 programs for sun-sight reduction (using Van Flandern–Pulkkinen solar formulas as arranged by B. Emerson of Her Majesty’s Nautical Almanac Office, a genius named Murdoch shoehorned the process into a calculator with a laughably small storage capacity so that it worked). You can still find the original article here:
+In March 1996 *Cruising World* published a practical TI-81 program for sun-sight reduction (using Van Flandern–Pulkkinen solar formulas as arranged by B. Emerson of Her Majesty’s Nautical Almanac Office, a genius named Murdoch shoehorned the process into a calculator with a laughably small storage capacity so that it worked). You can still find the original article here:
 
 https://books.google.ca/books?id=yJv58Lx1rhIC&pg=RA3-PA47
 
@@ -22,7 +22,7 @@ There were others: The Merlin II© was a celestial navigation computer system pr
 
 Those early programs proved the point: once the astronomical heavy lifting lives inside a calculator, the navigator’s life improves and the muttering decreases.
 
-SUNSIGHT is my modern cheapskate’s take on the idea. Written independently for the plain TI-84 Plus, it uses Jean Meeus’ more modern and accurate medium-precision algorithms (Meeus’ medium-precision Sun algorithms are accurate to a few arcseconds, far better than any sextant’s practical accuracy), a better ΔT model, improved refraction and parallax, and simple menus with better input error filters, none of which would have fitted comfortably into Murdoch’s tiny TI-81 program. SUNSIGHT computes the Sun’s GHA and declination internally using Meeus’ algorithms, so no almanac or external tables are required.
+SUNSIGHT is my modern cheapskate’s take on the idea. Written independently for the plain TI-84 Plus, it uses Jean Meeus’ more modern medium-precision solar calculations, a better ΔT model, improved refraction and parallax, and simple menus with better input error filters, none of which would have fitted comfortably into Murdoch’s tiny TI-81 program. In practical testing the resulting Sun positions are comfortably more precise than required for ordinary sextant work. SUNSIGHT computes the Sun’s GHA and declination internally, so no current *Nautical Almanac* or external tables are required for Sun reduction.
 
 I wish I could tell you it was an easy program to write, but my aged liberal arts degree and perfect lack of programming education were not conducive to a rapid development process, and the arcane nature of spherical trigonometry combined with TI’s idiosyncratic TI-BASIC language were tough to beat. The exercise would not have been possible (for me, at least) without access to the modern plethora of online tools, programming aids, easily accessed information from the internet and AI assistance. The exercise left me even more in awe of Murdoch’s work, completed in isolation with books mail ordered to his local library from the British Library. SUNSIGHT does not reproduce Murdoch’s TI-81 source code; it is an independent implementation using different astronomical calculations and a new program structure. Any errors are mine alone. All in all, the exercise was probably better for my brain than a few more Wordle puzzles, though.
 
@@ -30,7 +30,7 @@ You give the SUNSIGHT program the date, UTC time, assumed position, sextant alti
 
 The program is free, and available at this link:
 
-https://github.com/robmurray-avant/SUNSIGHT-TI84Plus/blob/main/README.md
+https://github.com/robmurray-avant/SUNSIGHT-TI84Plus
 
 And the best part? You don’t have to type it in by hand (the original Murdoch program had to be laboriously entered by hand, a 3 ½ hour exercise in tedium). Download it and transfer it to the calculator with the free ‘TI Connect CE’ software in a couple of minutes. That alone removes a major barrier for the rest of us who are not keen on entering hundreds of lines of code.
 
@@ -40,7 +40,7 @@ The TI-84 Plus was chosen deliberately. It is widely available second-hand, chea
 
 ## Independent failure modes
 
-This is the quiet strength of the system. The failure modes of a sextant, a quartz watch, and a battery-powered calculator are almost completely independent of the failure modes of GNSS, GPS, chart plotters, laptops, and phones. A software glitch, a flat house battery, or deliberate GPS disruption will not stop a sextant, a watch and a SUNSIGHT-programmed TI-84 Plus from producing a usable line of position from a Sun sight. That separation of failure modes is exactly what a backup is supposed to provide.
+This is the quiet strength of the system. The failure modes of a sextant, a quartz watch, and a battery-powered calculator are largely independent of the failure modes of GNSS, GPS, chart plotters, laptops, and phones. A software glitch, a flat house battery, or deliberate GPS disruption need not stop a sextant, a watch and a SUNSIGHT-programmed TI-84 Plus from producing a usable line of position from a Sun sight. That separation of failure modes is exactly what a backup is supposed to provide.
 
 When the chart plotter starts showing positions that make no sense, or the GPS simply drops out, a method that never asks the satellites for anything becomes disproportionately valuable. This is not a replacement for the chart plotter. It is what you reach for when the electronics fail—lightning, total GPS loss, GPS jamming in a conflict-adjacent area, a blank blue screen in mid-ocean, or simply the desire for an independent check (or something to do on watch) on a passage.
 
