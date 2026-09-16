@@ -29,9 +29,15 @@ Before relying on the program, enter Case A exactly:
 Expected result:
 
 ```text
-Intercept  11.3 To
-Zn         282.8
+Sun sight
+Int NM 11.3 To
+Zn   282.8
+
+LOW SUN
+USE WITH CAUTION
 ```
+
+The low-Sun caution is expected in Case A because the calculated apparent altitude Ha is about 1.76°, below the program's 5° caution threshold.
 
 If your calculator does not produce that result, do not rely on the installation until the problem is understood.
 
