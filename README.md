@@ -13,7 +13,7 @@ Intercept  11.3 To
 Zn         282.8
 ```
 
-The intercept is shown to 0.1 nautical mile and Zn to 0.1°. The program also gives caution messages for low-altitude sights and sights close to the zenith.
+The intercept is shown to 0.1 nautical mile and Zn to 0.1°. When applicable, the result screen also gives cautions for a low Sun, a Sun close to the zenith, or an intercept greater than 25 NM.
 
 ## What this project is
 
@@ -85,9 +85,15 @@ Enter:
 Expected result:
 
 ```text
-Intercept  11.3 To
-Zn         282.8
+Sun sight
+Int NM 11.3 To
+Zn   282.8
+
+LOW SUN
+USE WITH CAUTION
 ```
+
+The low-Sun caution is expected in Case A because Ha is about 1.76°, below the 5° caution threshold.
 
 Cases B–D are in [`docs/test-cases.md`](docs/test-cases.md).
 
