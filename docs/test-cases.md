@@ -53,6 +53,8 @@ All ten modern cases use the same sight-correction conditions so that the compar
 
 With zero index error and zero height of eye, the entered Hs is also the apparent altitude Ha used by SUNSIGHT.
 
+USNO's page takes **UT1**, while SUNSIGHT takes **UTC**. For this validation the same numerical date and clock time were entered in both systems, without applying a DUT1 offset. The comparison therefore tests the two calculations at identical entered clock fields rather than attempting to correct UTC to UT1.
+
 USNO values below are the displayed values transcribed from the USNO page. USNO displays GHA, declination, Hc and correction terms to 0.1′ and Zn to 0.1°, so differences smaller than roughly half of those displayed increments are not significant at the precision shown by the page.
 
 ### Test inputs and SUNSIGHT results
