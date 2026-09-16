@@ -4,7 +4,7 @@ SUNSIGHT is a Sun-sight reduction program for the **plain monochrome Texas Instr
 
 It is intended as a simple, independent celestial-navigation backup for offshore use. The program was written and tested on the plain TI-84 Plus and is deliberately limited to the Sun.
 
-**Current public-test version: v1.0.0 — 2026-09-12**
+**Current release: v1.0.0 — 2026-09-16**
 
 Enter the sight data and SUNSIGHT returns the two values normally needed to plot a line of position, with any applicable caution on the same screen:
 
@@ -21,11 +21,11 @@ The intercept is shown to 0.1 nautical mile and Zn to 0.1°. When applicable, th
 
 ## What this project is
 
-SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The present TI-84 Plus version occupies **6,734 bytes on the calculator** and spends the extra capacity on a Meeus-based solar ephemeris, ΔT handling, refined refraction, input checking, clearer prompts and numerical safeguards.
+SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The present TI-84 Plus version occupies **6,761 bytes on the calculator** and spends the extra capacity on a Meeus-based solar ephemeris, ΔT handling, refined refraction, input checking, clearer prompts and numerical safeguards.
 
 SUNSIGHT is an independent modern implementation inspired by Murdoch's TI-81 work. **Murdoch's original program and article are not included in, or licensed under, the SUNSIGHT MIT License. Copyright in those materials remains with their respective rights holders.**
 
-The current program has been checked against the four historical examples supplied with Murdoch's article and against U.S. Naval Observatory celestial-navigation data. Across Cases A–D, the largest difference in calculated altitude Hc was about **0.10 minute of arc**, and the largest difference in Zn was about **0.03°**.
+The current program has been checked against the four historical examples supplied with Murdoch's article and against a separate ten-case 2026–2036 U.S. Naval Observatory validation suite. Across Cases A–D, the largest difference in calculated altitude Hc was about **0.10 minute of arc**, and the largest difference in Zn was about **0.03°**. Across the ten modern cases, the largest differences from the USNO displayed values were about **0.47′ in GHA, 0.20′ in declination, 0.50′ in Hc and 0.05° in Zn**. The largest difference in displayed net sight correction was about **0.12′**.
 
 Supported dates are **1900 through 2049**.
 
@@ -48,7 +48,7 @@ Do **not** paste `SUNSIGHT.txt` or any annotated file into the calculator. The `
 - [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to the line-by-line explanation of the code.
 - [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
 - [`docs/INSTALL.md`](docs/INSTALL.md) — installation and acceptance-test instructions.
-- [`docs/test-cases.md`](docs/test-cases.md) — Cases A–D and the USNO comparison.
+- [`docs/test-cases.md`](docs/test-cases.md) — historical Cases A–D plus the ten-case 2026–2036 USNO validation suite.
 - [`docs/memory-map.md`](docs/memory-map.md) — A–Z and `L₁` memory map, user-entered values, diagnostic values, and instructions for inspecting stored data.
 - [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and authorized online links for Murdoch's March 1996 *Cruising World* article. Copyrighted magazine scans are not redistributed here.
@@ -99,7 +99,7 @@ USE WITH CAUTION
 
 The low-Sun caution is expected in Case A because Ha is about 1.76°, below the 5° caution threshold.
 
-Cases B–D are in [`docs/test-cases.md`](docs/test-cases.md).
+Additional historical and modern validation cases are in [`docs/test-cases.md`](docs/test-cases.md).
 
 ## Reporting a problem
 
