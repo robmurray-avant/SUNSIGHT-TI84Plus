@@ -6,11 +6,15 @@ It is intended as a simple, independent celestial-navigation backup for offshore
 
 **Current public-test version: v1.0.0 — 2026-09-12**
 
-Enter the sight data and SUNSIGHT returns the two values normally needed to plot a line of position:
+Enter the sight data and SUNSIGHT returns the two values normally needed to plot a line of position, with any applicable caution on the same screen:
 
 ```text
-Intercept  11.3 To
-Zn         282.8
+Sun sight
+Int NM 11.3 To
+Zn   282.8
+
+LOW SUN
+USE WITH CAUTION
 ```
 
 The intercept is shown to 0.1 nautical mile and Zn to 0.1°. When applicable, the result screen also gives cautions for a low Sun, a Sun close to the zenith, or an intercept greater than 25 NM.
@@ -129,4 +133,4 @@ Third-party material remains subject to the rights of its respective owners.
 
 ## Disclaimer
 
-This software is an educational and backup navigation tool, not a substitute for experience, education, judgment or common sense. While I have tested it extensively against the U.S. Naval Observatory’s “Celestial Navigation Data for Assumed Position and Time” and other authoritative sources, and it generally behaves itself and delivers accurate results, I cannot guarantee perfection (just ask Debra). A correct calculation will not save you from bad sights, a watch that has wandered off UTC, a rubbish DR, or classic “I typed 52° instead of 25°”-type errors. Garbage in, garbage out remains undefeated. Test it yourself. Keep and use other independent means of finding out where you are. And remember: this program will not make you taller or better looking, alleviate hangover symptoms, or prevent you from hitting something solid if you ignore the results. Use at your own risk, preferably while (reasonably) sober. 
+This software is an educational and backup navigation tool, not a substitute for experience, education, judgment or common sense. While I have tested it extensively against the U.S. Naval Observatory’s “Celestial Navigation Data for Assumed Position and Time” and other authoritative sources, and it generally behaves itself and delivers accurate results, I cannot guarantee perfection (just ask Debra). A correct calculation will not save you from bad sights, a watch that has wandered off UTC, a rubbish DR, or classic “I typed 52° instead of 25°”-type errors. Garbage in, garbage out remains undefeated. Test it yourself. Keep and use other independent means of finding out where you are. And remember: this program will not make you taller or better looking, alleviate hangover symptoms, or prevent you from hitting something solid if you ignore the results. Use at your own risk, preferably while (reasonably) sober.
