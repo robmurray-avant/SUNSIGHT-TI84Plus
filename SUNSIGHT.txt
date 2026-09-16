@@ -486,35 +486,27 @@ abs(L₁(66))→L₁(67)
 ClrHome
 Fix 1
 Output(1,1,"Sun sight")
-Output(3,1,"Intercept NM")
-Output(4,1,L₁(67))
-Output(4,10,"To")
+Output(2,1,"Int NM")
+Output(2,8,L₁(67))
+Output(2,13,"To")
 If L₁(66)<0
-Output(4,10,"From")
-Output(6,1,"Zn")
-Output(6,6,L₁(49))
+Output(2,13,"From")
+Output(3,1,"Zn")
+Output(3,6,L₁(49))
+If L₁(53)<5
+Output(5,1,"LOW SUN")
+If L₁(53)<5
+Output(6,1,"USE WITH CAUTION")
+If L₁(65)>87
+Output(5,1,"SUN NEAR ZENITH")
+If L₁(65)>87
+Output(6,1,"USE WITH CAUTION")
+If L₁(67)>25
+Output(7,1,"INT >25 NM")
+If L₁(67)>25
+Output(8,1,"REPLOT BETTER DR")
 Pause 
 Float
-If L₁(53)<5
-Goto H0
-If L₁(43)>87
-Goto H1
-Goto A3
-
-Lbl H0
-ClrHome
-Disp "Low altitude"
-Disp "USE WITH CAUTION"
-Pause 
-If L₁(43)>87
-Goto H1
-Goto A3
-
-Lbl H1
-ClrHome
-Disp "Near zenith"
-Disp "USE Zn WITH CAUTION"
-Pause 
 Goto A3
 
 Lbl E7
