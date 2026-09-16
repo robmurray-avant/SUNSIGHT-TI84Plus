@@ -16,7 +16,7 @@ https://www.starpath.com/foundation/NN-vol-2.pdf
 
 Murdoch's published explanation cites Van Flandern and Pulkkinen, **“Low Precision Formulae for Planetary Positions,” _The Astrophysical Journal Supplement Series_, vol. 41, p. 391 (1979)**, and notes that the formulae were put into the form used by B. Emerson in **N.A.O. Technical Note No. 47 — Approximate Solar Coordinates**, Her Majesty's Nautical Almanac Office, November 1978. Murdoch also cited Montenbruck and Pfleger, **_Astronomy on the Personal Computer_**, Springer-Verlag, 1991.
 
-Murdoch reported a **2,259-byte TI-81 program**. The present tested TI-84 Plus SUNSIGHT program occupies **6,734 bytes on the calculator**. The two calculators use different tokenization and storage architectures, so this is a useful size comparison rather than a precise measure of algorithmic complexity.
+Murdoch reported a **2,259-byte TI-81 program**. The released TI-84 Plus SUNSIGHT v1.0.0 program occupies **6,761 bytes on the calculator**. The two calculators use different tokenization and storage architectures, so this is a useful size comparison rather than a precise measure of algorithmic complexity.
 
 ## Solar position
 
@@ -52,16 +52,26 @@ U.S. Naval Observatory, **Celestial Navigation Data for Assumed Position and Tim
 
 https://aa.usno.navy.mil/data/celnav
 
-The USNO service provides GHA, declination, Hc, Zn and altitude-correction data for a specified assumed position and time. SUNSIGHT's four historical test cases were compared against this service. See [`test-cases.md`](test-cases.md) for the results.
+The USNO service provides GHA, declination, Hc, Zn and altitude-correction data for a specified assumed position and time. SUNSIGHT was checked against the four historical Cases A–D and against a separate ten-case 2026–2036 validation suite. See [`test-cases.md`](test-cases.md) for the complete inputs and comparison tables.
 
-Across Cases A–D, the largest differences found were approximately:
+Across historical Cases A–D, the largest differences found were approximately:
 
 - GHA: 0.16 arcminute
 - declination: 0.05 arcminute
 - Hc: 0.10 arcminute
 - Zn: 0.03 degree
 
-USNO's displayed refraction correction assumes standard atmospheric conditions; SUNSIGHT instead uses the pressure and temperature entered for the sight. Therefore the refraction columns are not expected to be identical for non-standard test conditions.
+Across the ten modern 2026–2036 cases, the largest differences from the USNO displayed values were approximately:
+
+- GHA: 0.47 arcminute
+- declination: 0.20 arcminute
+- Hc: 0.50 arcminute
+- Zn: 0.05 degree
+- displayed net sight correction: 0.12 arcminute
+
+The modern suite uses lower-limb sights, zero index error, zero height of eye, 1010 mb and 10 °C so the correction comparison is clean. USNO's page takes UT1 while SUNSIGHT takes UTC; for this validation the same numerical clock time was entered in both systems, without applying a DUT1 offset. USNO also rounds most displayed angular and correction values to 0.1′ and Zn to 0.1°.
+
+USNO's displayed refraction correction assumes standard atmospheric conditions; SUNSIGHT instead uses the pressure and temperature entered for the sight. Therefore the refraction columns are not expected to be identical for historical test cases using non-standard conditions.
 
 ## TI-84 Plus software and operating system
 
