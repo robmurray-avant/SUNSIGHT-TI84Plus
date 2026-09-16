@@ -1,8 +1,10 @@
 # Validation test cases
 
+## Historical Cases A–D
+
 These four cases come from the historical TI-81 article and were used during SUNSIGHT development.
 
-The numerical results below were rechecked against the current SUNSIGHT calculation code. The intercepts and Zn values remain unchanged. Case A now also displays the low-Sun caution because its apparent altitude Ha is below 5°.
+The numerical results below were rechecked against the current SUNSIGHT calculation code. The intercepts and Zn values remain unchanged. Case A also displays the low-Sun caution because its apparent altitude Ha is below 5°.
 
 | Case | Date / UTC | Position | Hs / limb | IE | Eye | P / T | SUNSIGHT result | Caution |
 |---|---|---|---|---|---:|---|---|---|
@@ -26,7 +28,7 @@ The current caution thresholds are:
 - Sun near zenith: Ho > 87°
 - large intercept: intercept magnitude > 25 NM
 
-## USNO comparison
+### Historical USNO comparison
 
 | Case | SUNSIGHT GHA | USNO GHA | SUNSIGHT Dec | USNO Dec | SUNSIGHT Hc | USNO Hc | SUNSIGHT Zn | USNO Zn |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -36,3 +38,77 @@ The current caution thresholds are:
 | D | 200°36.939′ | 200°37.1′ | S 21°13.895′ | S 21°13.9′ | 25°49.740′ | 25°49.7′ | 234.290° | 234.3° |
 
 Maximum differences across A–D were about 0.16′ in GHA, 0.05′ in declination, 0.10′ in Hc and 0.03° in Zn.
+
+## Modern USNO validation suite — 2026–2036
+
+A second validation suite was run against the U.S. Naval Observatory *Celestial Navigation Data for Assumed Position and Time* page to exercise north/south latitudes, east/west longitudes, and low, medium, high and near-zenith Sun altitudes.
+
+All ten modern cases use the same sight-correction conditions so that the comparison is clean:
+
+- lower limb
+- index error 0.0′
+- height of eye 0.0 m
+- pressure 1010 mb
+- temperature 10 °C
+
+With zero index error and zero height of eye, the entered Hs is also the apparent altitude Ha used by SUNSIGHT.
+
+USNO values below are the displayed values transcribed from the USNO page. USNO displays GHA, declination, Hc and correction terms to 0.1′ and Zn to 0.1°, so differences smaller than roughly half of those displayed increments are not significant at the precision shown by the page.
+
+### Test inputs and SUNSIGHT results
+
+| Case | Date / UTC | Assumed position | Hs lower limb | SUNSIGHT result | Caution |
+|---:|---|---|---:|---|---|
+| 1 | 2026-02-15 15:46:17 | N 48°12.3′ W 123°45.6′ | 3°04.1′ | **3.0 To, Zn 112.7°** | **LOW SUN / USE WITH CAUTION** |
+| 2 | 2027-06-21 02:32:42 | N 23°20.0′ E 140°15.0′ | 87°52.0′ | **2.0 From, Zn 86.4°** | **SUN NEAR ZENITH / USE WITH CAUTION** |
+| 3 | 2028-10-05 13:02:05 | S 34°15.0′ E 18°30.0′ | 44°51.2′ | **4.0 To, Zn 302.1°** | None |
+| 4 | 2029-12-21 16:05:33 | S 23°10.0′ W 70°20.0′ | 81°51.3′ | **3.0 From, Zn 93.6°** | None |
+| 5 | 2030-12-01 12:44:51 | N 25°30.0′ E 55°15.0′ | 7°45.6′ | **2.0 To, Zn 241.2°** | None |
+| 6 | 2031-07-10 23:02:09 | S 17°20.0′ W 149°30.0′ | 47°39.9′ | **4.0 From, Zn 339.5°** | None |
+| 7 | 2032-09-22 11:30:27 | N 60°00.0′ E 5°30.0′ | 29°50.1′ | **5.0 To, Zn 180.0°** | None |
+| 8 | 2033-01-15 05:29:44 | S 45°10.0′ W 170°15.0′ | 14°34.8′ | **5.0 From, Zn 254.9°** | None |
+| 9 | 2034-05-20 03:07:12 | N 15°30.0′ E 120°45.0′ | 77°53.1′ | **3.0 To, Zn 66.2°** | None |
+| 10 | 2036-11-05 12:34:36 | S 5°20.0′ W 35°40.0′ | 64°50.6′ | **2.0 From, Zn 117.0°** | None |
+
+### Ephemeris and sight-reduction comparison
+
+Absolute differences are shown as `|Δ|`.
+
+| Case | USNO GHA | SUNSIGHT GHA | |Δ| | USNO Dec | SUNSIGHT Dec | |Δ| | USNO Hc | SUNSIGHT Hc | |Δ| | USNO Zn | SUNSIGHT Zn | |Δ| |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 53°03.3′ | 53°02.952′ | 0.348′ | S 12°31.4′ | S 12°31.252′ | 0.148′ | 3°03.8′ | 3°03.299′ | **0.501′** | 112.7° | 112.672° | 0.028° |
+| 2 | 217°45.3′ | 217°45.049′ | 0.251′ | N 23°26.2′ | N 23°26.202′ | 0.002′ | 88°09.9′ | 88°09.729′ | 0.171′ | 86.4° | 86.380° | 0.020° |
+| 3 | 18°27.7′ | 18°27.563′ | 0.137′ | S 5°03.7′ | S 5°03.803′ | 0.103′ | 45°02.2′ | 45°02.354′ | 0.154′ | 302.1° | 302.053° | 0.047° |
+| 4 | 61°49.0′ | 61°48.975′ | 0.025′ | S 23°26.1′ | S 23°26.110′ | 0.010′ | 82°10.4′ | 82°10.446′ | 0.046′ | 93.6° | 93.649° | **0.049°** |
+| 5 | 13°57.2′ | 13°57.131′ | 0.069′ | S 21°51.0′ | S 21°51.018′ | 0.018′ | 7°53.2′ | 7°53.255′ | 0.055′ | 241.2° | 241.160° | 0.040° |
+| 6 | 164°10.4′ | 164°10.214′ | 0.186′ | N 22°09.4′ | N 22°09.330′ | 0.070′ | 47°58.8′ | 47°58.877′ | 0.077′ | 339.5° | 339.488° | 0.012° |
+| 7 | 354°29.2′ | 354°28.728′ | **0.472′** | S 0°00.3′ | S 0°00.504′ | **0.204′** | 29°59.7′ | 29°59.495′ | 0.205′ | 180.0° | 179.976° | 0.024° |
+| 8 | 260°05.1′ | 260°04.950′ | 0.150′ | S 21°03.5′ | S 21°03.419′ | 0.081′ | 14°52.4′ | 14°52.540′ | 0.140′ | 254.9° | 254.924° | 0.024° |
+| 9 | 227°39.7′ | 227°39.704′ | 0.004′ | N 19°58.4′ | N 19°58.449′ | 0.049′ | 78°05.7′ | 78°05.716′ | 0.016′ | 66.2° | 66.235° | 0.035° |
+| 10 | 12°45.1′ | 12°44.905′ | 0.195′ | S 15°56.4′ | S 15°56.448′ | 0.048′ | 65°08.5′ | 65°08.393′ | 0.107′ | 117.0° | 117.042° | 0.042° |
+
+Across the ten 2026–2036 cases, the largest absolute displayed-value differences were approximately:
+
+- **GHA: 0.47′** — Case 7
+- **declination: 0.20′** — Case 7
+- **Hc: 0.50′** — Case 1
+- **Zn: 0.05°** — Case 4
+
+### Sight-correction comparison
+
+| Case | USNO Refr | SUNSIGHT Refr | USNO SD | SUNSIGHT SD | USNO PA | SUNSIGHT PA | USNO Sum | SUNSIGHT Sum | |Δ Sum| |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | −14.2′ | −14.173′ | 16.2′ | 16.192′ | 0.1′ | 0.148′ | 2.1′ | 2.167′ | 0.067′ |
+| 2 | −0.0′ | −0.022′ | 15.7′ | 15.739′ | 0.0′ | 0.005′ | 15.7′ | 15.722′ | 0.022′ |
+| 3 | −1.0′ | −0.972′ | 16.0′ | 15.995′ | 0.1′ | 0.103′ | 15.1′ | 15.127′ | 0.027′ |
+| 4 | −0.1′ | −0.126′ | 16.3′ | 16.258′ | 0.0′ | 0.020′ | 16.1′ | 16.153′ | 0.053′ |
+| 5 | −6.8′ | −6.749′ | 16.2′ | 16.219′ | 0.1′ | 0.147′ | 9.5′ | 9.618′ | **0.118′** |
+| 6 | −0.9′ | −0.880′ | 15.7′ | 15.732′ | 0.1′ | 0.097′ | 14.9′ | 14.949′ | 0.049′ |
+| 7 | −1.7′ | −1.691′ | 15.9′ | 15.936′ | 0.1′ | 0.126′ | 14.3′ | 14.371′ | 0.071′ |
+| 8 | −3.7′ | −3.686′ | 16.3′ | 16.260′ | 0.1′ | 0.144′ | 12.7′ | 12.718′ | 0.018′ |
+| 9 | −0.2′ | −0.196′ | 15.8′ | 15.807′ | 0.0′ | 0.030′ | 15.6′ | 15.641′ | 0.041′ |
+| 10 | −0.5′ | −0.447′ | 16.1′ | 16.132′ | 0.1′ | 0.062′ | 15.7′ | 15.748′ | 0.048′ |
+
+The largest difference between SUNSIGHT's full-precision net sight correction and the USNO **displayed** Sum is about **0.12′**. Because the individual USNO correction terms and Sum are displayed only to 0.1′, part of this apparent difference is display rounding rather than necessarily a difference in the underlying USNO calculation.
+
+The modern suite therefore shows good agreement over both hemispheres, east and west longitudes, and observed altitudes from about 3° to 88°. The low-altitude Case 1 is the largest Hc difference in this set; the correction calculation itself remains close to the USNO displayed correction.
