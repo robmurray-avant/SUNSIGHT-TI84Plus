@@ -29,6 +29,26 @@ The current program has been checked against the four historical examples suppli
 
 Supported dates are **1900 through 2049**.
 
+## Accuracy in context: Murdoch, SUNSIGHT and the Nautical Almanac
+
+It is useful to separate **ephemeris accuracy** from the accuracy of the final plotted line of position.
+
+One minute of altitude corresponds to approximately one nautical mile along the intercept direction. But once ephemeris error is below a few tenths of an arcminute, the dominant errors in a real marine sight are usually the sight itself: sextant reading, horizon quality, vessel motion, exact timing, index error, dip and atmospheric refraction.
+
+| Method | Ephemeris / solar-position accuracy | Typical contribution to LOP error | Practical Sun LOP from a good small-boat sight |
+|---|---:|---:|---:|
+| **Murdoch TI-81** | about **1′ class** overall, often better in individual cases | about **≤1 NM** | about **1–2 NM** |
+| **SUNSIGHT** | about **0.2–0.5′ class** in documented testing | about **0.2–0.5 NM** | about **1–2 NM** |
+| **Standard Nautical Almanac method** | Sun GHA and declination published to **0.1′**; underlying ephemeris is better | about **0.1 NM or less** from the tabulated ephemeris itself | about **1–2 NM** |
+
+The comparison is deliberately approximate. It is intended to show scale, not to imply that every sight will fall inside those bands.
+
+Murdoch's program was already good enough to make practical Sun sights useful. SUNSIGHT improves the astronomical calculation substantially, but the final real-world LOP does not improve by the same amount because observational and atmospheric errors dominate.
+
+The standard *Nautical Almanac* remains the authoritative navigational reference. Its published Sun GHA and declination are given to **0.1′**, already finer than most hand-held marine sextant work can exploit.
+
+That is the practical reason SUNSIGHT does not need a much more elaborate ephemeris to be useful offshore.
+
 ## Download and install
 
 Use **[`SUNSIGHT.8xp`](SUNSIGHT.8xp)** to install the program on the calculator.
