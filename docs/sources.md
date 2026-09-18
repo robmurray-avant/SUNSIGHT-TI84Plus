@@ -34,7 +34,7 @@ Fred Espenak and Jean Meeus, **Polynomial Expressions for Delta T (ΔT)**, NASA/
 
 https://eclipse.gsfc.nasa.gov/SEcat5/deltatpoly.html
 
-SUNSIGHT uses the published historical piecewise polynomials for its supported **1900–2049** date range. The decimal year is formed as `year + (month - 0.5)/12`.
+SUNSIGHT uses the published historical piecewise polynomials for its supported **1900–2049** date range. The decimal year is formed as `year + (month - 0.5)/12`. ΔT is formally **TT − UT1**; SUNSIGHT uses the entered UTC clock as a practical approximation to UT1 and does not require a DUT1 input.
 
 ## Atmospheric refraction
 
@@ -56,7 +56,7 @@ U.S. Naval Observatory, **Celestial Navigation Data for Assumed Position and Tim
 
 https://aa.usno.navy.mil/data/celnav
 
-The USNO service provides GHA, declination, Hc, Zn and altitude-correction data for a specified assumed position and time. SUNSIGHT was checked against the four historical Cases A–D and against a separate ten-case 2026–2036 validation suite. See [`test-cases.md`](test-cases.md) for the complete inputs and comparison tables.
+The USNO service provides GHA, declination, Hc, Zn and altitude-correction data for a specified assumed position and time. Its time input is UT1, and the public form does not take the observer's pressure and temperature. SUNSIGHT was checked against the four historical Cases A–D and against a separate ten-case 2026–2036 validation suite. The historical USNO comparison therefore uses GHA, declination, Hc and Zn rather than treating USNO's standard-condition refraction as an apples-to-apples check of SUNSIGHT's pressure/temperature correction. See [`test-cases.md`](test-cases.md) for the complete comparison tables and [`case-a-murdoch-vs-sunsight.md`](case-a-murdoch-vs-sunsight.md) for the low-altitude Case A refraction discussion.
 
 Version 1.1 was hardware-tested on a plain monochrome TI-84 Plus with historical Cases A–D. All four passed.
 
@@ -71,7 +71,7 @@ USNO displays GHA and declination to 0.1′, so differences below roughly 0.05�
 
 A separate broad numerical stress test compared v1.0 and v1.1 with Swiss Ephemeris apparent geocentric solar coordinates every two days at 12:00 from 1900 through 2049, 27,394 epochs. Swiss Ephemeris was used as a high-precision numerical reference, **not as USNO**. In that test, GHA RMS error fell from about **0.201′** in v1.0 to **0.059′** in v1.1, and maximum GHA error from about **0.618′** to **0.196′**. Declination RMS fell from about **0.059′** to **0.019′**.
 
-USNO's page takes **UT1**, while SUNSIGHT takes **UTC**. For the modern comparison the same numerical date and clock time were entered in both systems; SUNSIGHT deliberately does not require DUT1.
+For the modern USNO comparison, the same numerical date and clock time were entered as USNO UT1 and SUNSIGHT UTC. The resulting sub-second time-scale difference is deliberately outside SUNSIGHT's standalone input model.
 
 ## TI-84 Plus software and operating system
 
