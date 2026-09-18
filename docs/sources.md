@@ -16,13 +16,17 @@ https://www.starpath.com/foundation/NN-vol-2.pdf
 
 Murdoch's published explanation cites Van Flandern and Pulkkinen, **“Low Precision Formulae for Planetary Positions,” _The Astrophysical Journal Supplement Series_, vol. 41, p. 391 (1979)**, and notes that the formulae were put into the form used by B. Emerson in **N.A.O. Technical Note No. 47 — Approximate Solar Coordinates**, Her Majesty's Nautical Almanac Office, November 1978. Murdoch also cited Montenbruck and Pfleger, **_Astronomy on the Personal Computer_**, Springer-Verlag, 1991.
 
-Murdoch reported a **2,259-byte TI-81 program**. The released TI-84 Plus SUNSIGHT v1.0.0 program occupies **6,761 bytes on the calculator**. The two calculators use different tokenization and storage architectures, so this is a useful size comparison rather than a precise measure of algorithmic complexity.
+Murdoch reported a **2,259-byte TI-81 program**. SUNSIGHT v1.0 occupied **6,761 bytes on the calculator**. The v1.1 calculator byte count should be recorded from the rebuilt `.8xp` rather than inferred from text length. The two calculators use different tokenization and storage architectures, so byte counts are useful context rather than a precise measure of algorithmic complexity.
 
 ## Solar position
 
 Jean Meeus, **_Astronomical Algorithms_**, 2nd ed., Willmann-Bell, 1998.
 
 SUNSIGHT uses Meeus-style formulae for Julian Date, geometric mean longitude and anomaly, orbital eccentricity, equation of centre, apparent solar longitude, obliquity, right ascension, declination, Earth–Sun distance, and the sidereal-time path used to obtain GHA.
+
+Version 1.1 retains that structure and adds eight small periodic corrections to true solar longitude. The terms are derived from Earth-longitude terms in **VSOP87D** and are used only as a compact perturbation correction; SUNSIGHT does not become a full VSOP87D implementation.
+
+Primary VSOP87 reference: P. Bretagnon and G. Francou, **“Planetary theories in rectangular and spherical variables. VSOP87 solutions,” _Astronomy and Astrophysics_ 202 (1988), 309–315.**
 
 ## ΔT
 
@@ -54,24 +58,20 @@ https://aa.usno.navy.mil/data/celnav
 
 The USNO service provides GHA, declination, Hc, Zn and altitude-correction data for a specified assumed position and time. SUNSIGHT was checked against the four historical Cases A–D and against a separate ten-case 2026–2036 validation suite. See [`test-cases.md`](test-cases.md) for the complete inputs and comparison tables.
 
-Across historical Cases A–D, the largest differences found were approximately:
+Version 1.1 was hardware-tested on a plain monochrome TI-84 Plus with historical Cases A–D. All four passed.
 
-- GHA: 0.16 arcminute
-- declination: 0.05 arcminute
-- Hc: 0.10 arcminute
-- Zn: 0.03 degree
+For the separate modern ephemeris comparison, the exact v1.1 formulas and the reconstructed Murdoch article code were run off-calculator against the same ten USNO cases. Over those ten cases:
 
-Across the ten modern 2026–2036 cases, the largest differences from the USNO displayed values were approximately:
+- SUNSIGHT v1.1 GHA: **0.044′ mean absolute difference**, **0.145′ maximum**
+- Murdoch GHA: **0.046′ mean absolute difference**, **0.103′ maximum**
+- SUNSIGHT v1.1 declination: **0.032′ mean absolute difference**, **0.063′ maximum**
+- Murdoch declination: **0.022′ mean absolute difference**, **0.048′ maximum**
 
-- GHA: 0.47 arcminute
-- declination: 0.20 arcminute
-- Hc: 0.50 arcminute
-- Zn: 0.05 degree
-- displayed net sight correction: 0.12 arcminute
+USNO displays GHA and declination to 0.1′, so differences below roughly 0.05′ are at or below the display-resolution floor and should not be used to claim meaningful superiority of one compact algorithm over another.
 
-The modern suite uses lower-limb sights, zero index error, zero height of eye, 1010 mb and 10 °C so the correction comparison is clean. USNO's page takes UT1 while SUNSIGHT takes UTC; for this validation the same numerical clock time was entered in both systems, without applying a DUT1 offset. USNO also rounds most displayed angular and correction values to 0.1′ and Zn to 0.1°.
+A separate broad numerical stress test compared v1.0 and v1.1 with Swiss Ephemeris apparent geocentric solar coordinates every two days at 12:00 from 1900 through 2049, 27,394 epochs. Swiss Ephemeris was used as a high-precision numerical reference, **not as USNO**. In that test, GHA RMS error fell from about **0.201′** in v1.0 to **0.059′** in v1.1, and maximum GHA error from about **0.618′** to **0.196′**. Declination RMS fell from about **0.059′** to **0.019′**.
 
-USNO's displayed refraction correction assumes standard atmospheric conditions; SUNSIGHT instead uses the pressure and temperature entered for the sight. Therefore the refraction columns are not expected to be identical for historical test cases using non-standard conditions.
+USNO's page takes **UT1**, while SUNSIGHT takes **UTC**. For the modern comparison the same numerical date and clock time were entered in both systems; SUNSIGHT deliberately does not require DUT1.
 
 ## TI-84 Plus software and operating system
 
