@@ -5,7 +5,7 @@
 
 ## What changed
 
-SUNSIGHT v1.1 keeps the compact Meeus-style solar ephemeris and adds eight small VSOP87D-derived periodic longitude terms. The goal is to improve solar GHA/declination materially without replacing SUNSIGHT with SUNSITE2's larger truncated-VSOP87D architecture.
+SUNSIGHT v1.1 keeps the compact Meeus-style solar ephemeris and adds eight small VSOP87D-derived periodic longitude terms. The goal is to improve solar GHA/declination materially while preserving SUNSIGHT's compact architecture.
 
 The new correction is stored only in `L₁(72)`; existing list meanings are unchanged.
 
@@ -31,4 +31,6 @@ USNO displays GHA/declination to 0.1′, so differences of only a few hundredths
 
 ## Release binary
 
-The released `SUNSIGHT.8xp` was built from the tested v1.1 source and is the recommended installation file. It occupies **6,997 bytes on the calculator** and **7,056 bytes as a file**.
+The released `SUNSIGHT.8xp` is the hardware-tested v1.1 program and the recommended installation file. It occupies **6,997 bytes on the calculator** and **7,056 bytes as a file**.
+
+SHA-256: **`5754b6f24b85d4aca1a5b2dd7a45d2f8f69e62e311aef9b02977539707d0690f`**
