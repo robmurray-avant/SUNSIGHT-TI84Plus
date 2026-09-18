@@ -2,7 +2,7 @@
 
 SUNSIGHT v1.1.0 was written and tested on the **plain monochrome Texas Instruments TI-84 Plus**.
 
-Version 1.1 installs under the program name `SUNSIGHT`. The final v1.1 `.8xp` must be rebuilt from the tested source before the v1.1 tag/release is published; the v1.0 binary must not be relabelled as v1.1. Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` unless you specifically intend to deal with TI-BASIC tokenization details.
+Version 1.1 installs under the program name `SUNSIGHT`, occupies **6,997 bytes on the calculator**, and the installable `.8xp` file is **7,056 bytes**. Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` unless you specifically intend to deal with TI-BASIC tokenization details.
 
 ## Installation
 
