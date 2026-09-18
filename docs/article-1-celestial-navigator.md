@@ -32,7 +32,7 @@ The program is free, and available at this link:
 
 https://github.com/robmurray-avant/SUNSIGHT-TI84Plus
 
-And the best part? You don’t have to type it in by hand (the original Murdoch program had to be laboriously entered by hand, a 3 ½ hour exercise in tedium). Download it and transfer it to the calculator with the free ‘TI Connect CE’ software in a couple of minutes. That alone removes a major barrier for the rest of us who are not keen on entering hundreds of lines of code.
+And the best part? You don’t have to type it in by hand. *Cruising World*’s editor reported spending about 3½ hours reading the instructions and relevant TI-81 manual sections, then another three hours entering Murdoch’s program. Download SUNSIGHT and transfer it to the calculator with the free ‘TI Connect CE’ software in a couple of minutes. That alone removes a major barrier for the rest of us who are not keen on entering hundreds of lines of code.
 
 ## Why the TI-84 Plus?
 
