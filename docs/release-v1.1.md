@@ -9,6 +9,8 @@ SUNSIGHT v1.1 keeps the compact Meeus-style solar ephemeris and adds eight small
 
 The new correction is stored only in `L₁(72)`; existing list meanings are unchanged.
 
+**Program size:** 6,997 bytes on calculator; 7,056-byte `.8xp` file.
+
 ## Validation
 
 - Historical Cases A–D were run successfully on a physical plain TI-84 Plus.
@@ -38,6 +40,6 @@ The tested text source uses:
 
 Do not normalize or substitute these characters when creating the TI-BASIC program.
 
-## Before publishing the GitHub release
+## Release binary
 
-The final v1.1 `SUNSIGHT.8xp` must be rebuilt from the tested v1.1 source, transferred back to a physical TI-84 Plus, and Case A rerun from that exact binary. Record the calculator byte count and replace the v1.0 binary before tagging/releasing v1.1.0.
+The supplied v1.1 `SUNSIGHT.8xp` was built from the tested v1.1 source. It occupies **6,997 bytes on the calculator** and **7,056 bytes as a file**. The uploaded filename suffix `(4)` is not part of the release name; the repository file is `SUNSIGHT.8xp`.
