@@ -2,7 +2,7 @@
 
 SUNSIGHT v1.1.0 was written and tested on the **plain monochrome Texas Instruments TI-84 Plus**.
 
-Version 1.1 installs under the program name `SUNSIGHT`, occupies **6,997 bytes on the calculator**, and the installable `.8xp` file is **7,056 bytes**. Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` unless you specifically intend to deal with TI-BASIC tokenization details.
+Version 1.1 installs under the program name `SUNSIGHT`, occupies **6,997 bytes on the calculator**, and the installable `.8xp` file is **7,056 bytes**. Use the `.8xp` file for installation; `SUNSIGHT.txt` and the annotated files are provided for reading and documentation.
 
 ## Installation
 
@@ -49,6 +49,6 @@ The program accepts years **1900 through 2049**.
 
 ## Notes about the text source
 
-`SUNSIGHT.txt` is provided so the tested TI-BASIC source can be inspected and documented. In v1.1 the human-readable source deliberately uses the TI Connect CE-compatible private-use inverse-trig glyph `` in `sin(` and `tan(`, literal `L₁`, literal `√`, and a trailing space after every `Pause `. Unicode substitution, whitespace cleanup or editor normalization can break tokenization. The final `.8xp` remains the preferred installation format.
+`SUNSIGHT.txt` is a human-readable representation of the v1.1 TI-BASIC program for inspection and documentation. For normal installation, use the released `SUNSIGHT.8xp` file.
 
 If you encounter a problem, open a GitHub issue and include the SUNSIGHT version, calculator model, all inputs, expected result if known, actual result, and whether Case A passes on the same calculator.
