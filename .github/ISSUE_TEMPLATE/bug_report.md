@@ -8,7 +8,7 @@ assignees: ""
 
 ## SUNSIGHT version
 
-Example: v1.0.0
+Example: v1.1.0
 
 ## Calculator
 
