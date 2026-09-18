@@ -21,7 +21,7 @@ The intercept is shown to 0.1 nautical mile and Zn to 0.1°. When applicable, th
 
 ## What this project is
 
-SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The original v1.0 TI-84 Plus release occupied **6,761 bytes on the calculator**. Version 1.1 occupies **6,997 bytes on the calculator** (**7,056 bytes** as the `.8xp` file). Version 1.1 retains the same compact Meeus-style solar model and adds eight small periodic longitude terms derived from VSOP87D to improve the ephemeris while preserving the program's compact architecture.
+SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted the eight operational programs of his Sun ephemeris and sight-reduction system into **2,259 bytes**; his separate `ALLOUT` diagnostic program added another 128 bytes. The original v1.0 TI-84 Plus release occupied **6,761 bytes on the calculator**. Version 1.1 occupies **6,997 bytes on the calculator** (**7,056 bytes** as the `.8xp` file). Version 1.1 retains the same compact Meeus-style solar model and adds eight small periodic longitude terms derived from VSOP87D to improve the ephemeris while preserving the program's compact architecture.
 
 SUNSIGHT is an independent modern implementation inspired by Murdoch's TI-81 work. **Murdoch's original program and article are not included in, or licensed under, the SUNSIGHT MIT License. Copyright in those materials remains with their respective rights holders.**
 
