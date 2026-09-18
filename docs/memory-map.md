@@ -2,7 +2,7 @@
 
 SUNSIGHT stores the user-entered sight data in the calculator's letter variables and the calculation intermediates in list `L₁`.
 
-The program dimensions `L₁` to 71 elements. After a completed sight, the values remain available until another calculation overwrites them or the user changes them.
+The program dimensions `L₁` to 72 elements. After a completed sight, the values remain available until another calculation overwrites them or the user changes them.
 
 ## How to inspect stored values
 
@@ -158,6 +158,7 @@ This table combines the user-entered sight data with the principal calculated va
 | `L₁(69)` | Raw declination inverse-sine argument | dimensionless | `sin(obliquity) × sin(apparent longitude)` before numerical protection |
 | `L₁(70)` | Protected declination inverse-sine argument | dimensionless | `L₁(69)` clamped to the valid range −1…+1 |
 | `L₁(71)` | Protected Hc inverse-sine argument | dimensionless | Copy of `L₁(42)`, clamped to −1…+1 before calculating Hc |
+| `L₁(72)` | Compact solar-longitude perturbation correction | degrees | Sum of the eight added periodic longitude terms used by v1.1 before apparent solar longitude is formed |
 
 ## Notes
 
@@ -171,4 +172,4 @@ The final plotting values are:
 - `L₁(66)` — signed intercept, positive To / negative From
 - `L₁(67)` — intercept magnitude
 
-This page documents the memory layout of SUNSIGHT v1.0.0. It is intended for troubleshooting, validation and development; future program versions may change the allocation of scratch locations.
+This page documents the memory layout of SUNSIGHT v1.1.0. It is intended for troubleshooting, validation and development; future program versions may change the allocation of scratch locations.
