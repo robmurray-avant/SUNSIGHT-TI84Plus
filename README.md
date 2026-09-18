@@ -10,7 +10,7 @@ Enter the sight data and SUNSIGHT returns the two values normally needed to plot
 
 ```text
 Sun sight
-Int NM 11.3 To
+Int NM 11.4 To
 Zn   282.8
 
 LOW SUN
