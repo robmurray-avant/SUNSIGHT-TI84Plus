@@ -68,7 +68,7 @@ For v1.1.0, the correct `SUNSIGHT.8xp` is **7,056 bytes** and has SHA-256 **`575
 ## Repository contents
 
 - [`SUNSIGHT.8xp`](SUNSIGHT.8xp) — installable TI-84 Plus program for transfer with TI Connect CE.
-- [`SUNSIGHT.txt`](SUNSIGHT.txt) — human-readable text representation of the tested TI-BASIC source.
+- [`SUNSIGHT.txt`](SUNSIGHT.txt) — human-readable rendering of the v1.1 TI-BASIC program.
 - [`SUNSIGHT_ANNOTATED.md`](SUNSIGHT_ANNOTATED.md) — index to the line-by-line explanation of the code.
 - [`docs/annotated/`](docs/annotated/) — the full commented source, split into readable sections.
 - [`docs/INSTALL.md`](docs/INSTALL.md) — installation and acceptance-test instructions.
