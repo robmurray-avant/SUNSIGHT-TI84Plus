@@ -4,7 +4,7 @@ SUNSIGHT is a Sun-sight reduction program for the **plain monochrome Texas Instr
 
 It is intended as a simple, independent celestial-navigation backup for offshore use. The program was written and tested on the plain TI-84 Plus and is deliberately limited to the Sun.
 
-**Release branch: v1.1.0 — 2026-09-18**
+**Current release: v1.1.0 — 2026-09-18**
 
 Enter the sight data and SUNSIGHT returns the two values normally needed to plot a line of position, with any applicable caution on the same screen:
 
@@ -61,7 +61,7 @@ Use **[`SUNSIGHT.8xp`](SUNSIGHT.8xp)** to install the program on the calculator.
 4. Run `SUNSIGHT` from the calculator's program menu.
 5. Run **Case A** below before relying on the installation.
 
-Do **not** paste `SUNSIGHT.txt` or any annotated file into the calculator. The `.txt` file is provided as a human-readable representation of the tested source; the annotated files are documentation only. TI-BASIC tokenization is fussy enough without inviting additional trouble.
+`SUNSIGHT.txt` is provided as a human-readable representation of the tested source, and the annotated files are documentation. For installation, use the released `SUNSIGHT.8xp` file.
 
 ## Repository contents
 
