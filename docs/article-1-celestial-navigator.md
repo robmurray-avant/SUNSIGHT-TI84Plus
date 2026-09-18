@@ -18,7 +18,7 @@ In March 1996 *Cruising World* published a practical TI-81 program for sun-sight
 
 https://books.google.ca/books?id=yJv58Lx1rhIC&pg=RA3-PA47
 
-There were others: The Merlin II© was a celestial navigation computer system programmed into compact pocket calculators like the Sharp EL-512 sold during the 1980s and 1990s. It was designed for navigators to calculate sight reductions, sun, moon, and star sights rapidly. David Burch’s Starpath School of Navigation in Seattle still sells their TI-89 titanium based ‘StarPilot-89 Navigation Calculator’ (and it is a far, far more capable program) but it is pricey at ~$380 USD.
+There were others: The Merlin II© was a celestial navigation computer system programmed into compact pocket calculators like the Sharp EL-512 sold during the 1980s and 1990s. It was designed for navigators to calculate sight reductions, sun, moon, and star sights rapidly. David Burch’s Starpath School of Navigation in Seattle still sells the TI-89 Titanium-based ‘StarPilot-89 Navigation Calculator’. It is a far more capable program, but at several hundred dollars it is a very different proposition from a second-hand TI-84 Plus.
 
 Those early programs proved the point: once the astronomical heavy lifting lives inside a calculator, the navigator’s life improves and the muttering decreases.
 
@@ -36,7 +36,7 @@ And the best part? You don’t have to type it in by hand (the original Murdoch 
 
 ## Why the TI-84 Plus?
 
-The TI-84 Plus was chosen deliberately. It is widely available second-hand, cheap, rugged (enough) for boat life, and runs on ordinary AAA batteries for a very long time. It is technologically outdated by modern computing standards, but it remains heavily used in schools, because teachers know the TI-84 Plus series inside and out. Lesson plans, guidebooks, and curricula written decades ago are built around it. It has no Wi-Fi, no Bluetooth, no operating system updates to speak of, and no interest in phoning home. Once the program is loaded, it is a self-contained computational engine that does not depend on satellites, cellular networks, reference tables, or the boat’s electrical system. In an age when almost every other navigation tool is networked or rechargeable, that independence is a feature, not a limitation. This program was developed and tested only on the TI-84 Plus, so look for one of those.
+The TI-84 Plus was chosen deliberately. It is widely available second-hand, cheap, rugged (enough) for boat life, and runs on ordinary AAA batteries for a very long time. It is technologically outdated by modern computing standards, but it remains heavily used in schools, because teachers know the TI-84 Plus series inside and out. Lesson plans, guidebooks, and curricula written decades ago are built around it. It has no Wi-Fi or Bluetooth and needs no network account, subscription, or background service to run SUNSIGHT. Once the program is loaded, it is a self-contained computational engine that does not depend on satellites, cellular networks, reference tables, or the boat’s electrical system. In an age when almost every other navigation tool is networked or rechargeable, that independence is a feature, not a limitation. This program was developed and tested only on the TI-84 Plus, so look for one of those.
 
 ## Independent failure modes
 
@@ -75,7 +75,7 @@ Position comes from the running fix: the crossing of the advanced morning and af
 ## What you need
 
 - A sextant (a functional second-hand Davis plastic or antique EBBCO sextant is a perfectly serviceable, low-cost unit)
-- A watch set to UTC (a classic Casio F-91W or the newer F-105W with the improved illuminator is ideal—cheap, accurate, and runs for ~10 years on a battery). You must establish a rate for the watch. (To rate a watch for celestial navigation, you measure how many seconds it gains or loses each day against an accurate time standard so you can correct it for use with your sights. Note when last synced to a known time source and what the error is per day when you store it so you can correct for it when you pull it out to use it in anger.)
+- A watch set to UTC (a classic Casio F-91W or the F-105W with the improved illuminator is ideal—cheap, accurate, and long-lived on a replaceable battery). You must establish a rate for the watch. (To rate a watch for celestial navigation, you measure how many seconds it gains or loses each day against an accurate time standard so you can correct it for use with your sights. Note when last synced to a known time source and what the error is per day when you store it so you can correct for it when you pull it out to use it in anger.)
 - A SUNSIGHT-programmed TI-84 Plus
 
 ## Step-by-step
@@ -98,7 +98,7 @@ The same places are good sources for inexpensive plastic sextants. Check they wo
 
 **Batteries:** Prefer non-rechargeable lithium cells (Energizer Ultimate Lithium or similar) or low-self-discharge NiMH (IKEA Ladda or Eneloop-style) over alkaline cells. Ordinary alkaline batteries are a classic source of spontaneous chemistry experiments that lead to corroded battery compartments and subsequent sadness.
 
-**Storage:** Keep the calculator and watch in a Ziplock bag in a sealed box or dry bag with spare batteries and desiccant. For extra protection, wrap it in a couple of layers of aluminium foil or place it inside a metal tin, creating a simple Faraday cage. Store it away from the boat’s main lightning paths. Power it up occasionally to confirm the program is still there and that you still remember which button does what. Replace or recharge the batteries every year or two (do the 4 AAAs separately from the silver-oxide cell so you don’t inadvertently clear the program from memory). Write the service dates on a bit of masking tape on the package.
+**Storage:** Keep the calculator and watch in a Ziplock bag in a sealed box or dry bag with spare batteries and desiccant. For extra protection, wrap it in a couple of layers of aluminium foil or place it inside a metal tin, creating a simple Faraday cage. Store it away from the boat’s main lightning paths. Power it up occasionally to confirm the program is still there and that you still remember which button does what. Replace or recharge the batteries on a sensible schedule. When changing batteries, leave the silver-oxide backup cell installed while replacing the four AAAs, and leave the AAAs installed while replacing the backup cell, so calculator memory remains powered. Write the service dates on a bit of masking tape on the package.
 
 ## The bottom line
 
