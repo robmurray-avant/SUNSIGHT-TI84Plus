@@ -22,7 +22,7 @@ There were others: The Merlin II© was a celestial navigation computer system pr
 
 Those early programs proved the point: once the astronomical heavy lifting lives inside a calculator, the navigator’s life improves and the muttering decreases.
 
-SUNSIGHT v1.1 is my modern cheapskate’s take on the idea. Written independently for the plain TI-84 Plus, it retains a compact Meeus-style solar calculation and adds eight small periodic longitude terms to improve the ephemeris, together with a better ΔT model, improved refraction and parallax, and simple menus with better input error filters—none of which would have fitted comfortably into Murdoch’s tiny TI-81 program. In practical testing the resulting Sun positions are comfortably more precise than required for ordinary sextant work. SUNSIGHT computes the Sun’s GHA and declination internally, so no current *Nautical Almanac* or external tables are required for Sun reduction.
+SUNSIGHT v1.1 is my modern cheapskate’s take on the idea. Written independently for the plain TI-84 Plus, it retains a compact Meeus-style solar calculation and adds eight small periodic longitude terms to improve the ephemeris, together with a better ΔT model, improved refraction and parallax, and simple menus with better input error filters—none of which would have fitted comfortably into Murdoch’s tiny TI-81 program. In practical testing the resulting Sun positions are comfortably more precise than required for ordinary sextant work. SUNSIGHT computes the Sun’s GHA and declination internally, so within its supported **1900–2049** date range no current *Nautical Almanac* or external tables are required for Sun reduction.
 
 I wish I could tell you it was an easy program to write, but my aged liberal arts degree and perfect lack of programming education were not conducive to a rapid development process, and the arcane nature of spherical trigonometry combined with TI’s idiosyncratic TI-BASIC language were tough to beat. The exercise would not have been possible (for me, at least) without access to the modern plethora of online tools, programming aids, easily accessed information from the internet and AI assistance. The exercise left me even more in awe of Murdoch’s work, completed in isolation with books mail ordered to his local library from the British Library. SUNSIGHT does not reproduce Murdoch’s TI-81 source code; it is an independent implementation using different astronomical calculations and a new program structure. Any errors are mine alone. All in all, the exercise was probably better for my brain than a few more Wordle puzzles, though.
 
@@ -58,7 +58,7 @@ Most of us do not practice celestial navigation every week. The procedures fade.
 | Risk of arithmetic error | Real | Much lower |
 | **Typical time after the sight** | **15–30+ minutes** | **2–4 minutes** |
 
-Because the time and effort to reduce the sights is so quick and easy you can take and reduce multiple sights and toss out outliers.
+Because the reduction is quick and easy, you can take and reduce multiple sights and toss out outliers.
 
 The calculator does not make you a better navigator. It simply removes most of the places where rusty skills can produce friction, frustration and wrong answers. For dummies like me, that is a genuine improvement.
 
@@ -98,7 +98,7 @@ The same places are good sources for inexpensive plastic sextants. Check they wo
 
 **Batteries:** Prefer non-rechargeable lithium cells (Energizer Ultimate Lithium or similar) or low-self-discharge NiMH (IKEA Ladda or Eneloop-style) over alkaline cells. Ordinary alkaline batteries are a classic source of spontaneous chemistry experiments that lead to corroded battery compartments and subsequent sadness.
 
-**Storage:** Keep the calculator and watch in a Ziplock bag in a sealed box or dry bag with spare batteries and desiccant. For extra protection, wrap it in a couple of layers of aluminium foil or place it inside a metal tin, creating a simple Faraday cage. Store it away from the boat’s main lightning paths. Power it up occasionally to confirm the program is still there and that you still remember which button does what. Replace or recharge the batteries on a sensible schedule. When changing batteries, leave the silver-oxide backup cell installed while replacing the four AAAs, and leave the AAAs installed while replacing the backup cell, so calculator memory remains powered. Write the service dates on a bit of masking tape on the package.
+**Storage:** Keep the calculator and watch in a Ziplock bag in a sealed box or dry bag with spare batteries and desiccant. For some additional electromagnetic shielding, wrap it in a couple of layers of aluminium foil or place it inside a metal tin. Treat that as extra protection, not as a guarantee against lightning or electromagnetic damage. Store it away from the boat’s main lightning paths. Power it up occasionally to confirm the program is still there and that you still remember which button does what. Replace or recharge the batteries on a sensible schedule. When changing batteries, leave the silver-oxide backup cell installed while replacing the four AAAs, and leave the AAAs installed while replacing the backup cell, so calculator memory remains powered. Write the service dates on a bit of masking tape on the package.
 
 ## The bottom line
 
