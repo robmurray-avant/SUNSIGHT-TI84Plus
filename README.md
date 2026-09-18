@@ -94,6 +94,52 @@ SUNSIGHT asks for:
 
 North/South, East/West, limb and index-error direction are entered as numbered choices to reduce the chance of sign mistakes.
 
+## Warnings and why they are there
+
+SUNSIGHT gives three practical navigation cautions on the result screen.
+
+### LOW SUN — apparent altitude below 5°
+
+Refraction becomes rapidly larger and less predictable as altitude falls. SUNSIGHT calculates a standard correction from the entered pressure and temperature, but the real atmosphere may not behave like the model.
+
+*The American Practical Navigator* (Bowditch) puts the problem plainly:
+
+> “The atmosphere contains many irregularities which are erratic in their influence upon refraction.”
+
+Bowditch notes that temperature inversions, fronts, squalls, differences between sea and air temperature and layered air can all produce abnormal refraction. Near the horizon, even a mathematically excellent ephemeris cannot remove that uncertainty.
+
+National Geospatial-Intelligence Agency, *The American Practical Navigator (Bowditch)*, Pub. No. 9, 2024 edition, Vol. II, §605, “Astronomical Refraction,” p. 250. Official publication page: [https://msi.nga.mil/Publications/APN](https://msi.nga.mil/Publications/APN)
+
+The LOW SUN warning therefore means exactly what it says: the result may still be useful, but it deserves less confidence than a sight taken at a healthier altitude.
+
+### SUN NEAR ZENITH — corrected altitude above 87°
+
+The near-zenith warning is mainly a geometry and plotting caution, not a refraction warning. As the Sun approaches the zenith, azimuth can change very rapidly and the circle of equal altitude becomes too tightly curved to be represented well by an ordinary straight line of position.
+
+Bowditch states:
+
+> “It is not always easy to determine the azimuth accurately, and when near the zenith, a body may be changing azimuth rapidly.”
+
+It also warns that for a body near the zenith:
+
+> “the use of a straight line to approximate the circle may introduce serious error.”
+
+SUNSIGHT's 87° threshold corresponds closely to Bowditch's further guidance that within about three degrees of the zenith the circle of position should be plotted as a circle rather than treated as a straight LOP.
+
+National Geospatial-Intelligence Agency, *The American Practical Navigator (Bowditch)*, Pub. No. 9, 2024 edition, Vol. I, §2011, “High Altitude Sights,” pp. 362–364. Official publication page: [https://msi.nga.mil/Publications/APN](https://msi.nga.mil/Publications/APN)
+
+### INT >25 NM — large intercept
+
+A large intercept does not necessarily mean the celestial calculation is wrong. It usually means the assumed or DR position is a poor centre from which to plot the line of position, or that an input deserves checking.
+
+SUNSIGHT therefore advises:
+
+`REPLOT BETTER DR`
+
+The purpose is practical: use a more suitable assumed position and check the sight data rather than blindly plotting a very large intercept.
+
+These are **navigation cautions, not calculation-error messages**.
+
 ## Standard acceptance test — Case A
 
 Enter:
