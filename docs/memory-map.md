@@ -107,7 +107,7 @@ This table combines the user-entered sight data with the principal calculated va
 | `L₁(18)` | True solar longitude, unnormalized | degrees | Mean longitude + equation of centre |
 | `L₁(19)` | True solar longitude | degrees | Normalized to 0–360° |
 | `L₁(20)` | Ω node-angle term | degrees | Approximate lunar-node angle used in apparent longitude/nutation corrections |
-| `L₁(21)` | Apparent solar longitude, unnormalized | degrees | True longitude with apparent-position correction |
+| `L₁(21)` | Apparent solar longitude, unnormalized | degrees | True longitude plus the v1.1 eight-term perturbation correction and apparent-position correction |
 | `L₁(22)` | Apparent solar longitude | degrees | Normalized to 0–360° |
 | `L₁(23)` | Mean obliquity of the ecliptic | degrees | Mean axial tilt |
 | `L₁(24)` | Corrected obliquity | degrees | Obliquity including the Ω correction |
