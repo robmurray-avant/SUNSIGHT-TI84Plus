@@ -1,22 +1,22 @@
 # Why Murdoch and SUNSIGHT Differ on Case A
 
-Astute observers will have noticed Case A from William S. Murdoch’s 1996 *Cruising World* article varies in its' answer from SUNSIGHT. Case A is a useful validation case because Murdoch’s program and SUNSIGHT agree very closely on the Sun’s direction, yet they produce noticeably different intercepts.
+Case A from William S. Murdoch’s 1996 *Cruising World* article is a useful low-altitude regression test because Murdoch’s program and SUNSIGHT v1.1 agree very closely on the Sun’s direction, while the final intercepts differ by a few tenths of a nautical mile.
 
 Murdoch reports:
 
 - Intercept: **11.7191 NM To**
 - Zn: **282.7873°**
 
-SUNSIGHT gives approximately:
+SUNSIGHT v1.1 gives:
 
-- Intercept: **11.3 NM To**
+- Intercept: **11.4 NM To** (full-precision value about **11.354 NM To**)
 - Zn: **282.8°**
 
-At first glance, a difference of about **0.4 NM** in intercept looks larger than expected. The reason is that the two programs differ very little in their computed position of the Sun; most of the difference comes from the atmospheric refraction correction applied to the observed altitude.
+The difference in intercept is about **0.37 NM**. Most of it comes from the different atmospheric-refraction treatment, not from a large disagreement in the computed position of the Sun.
 
 ## Case A
 
-The inputs are:
+Inputs:
 
 - 8 April 1950
 - 18:43:28 UTC
@@ -29,131 +29,101 @@ The inputs are:
 - Pressure 1050 mb
 - Temperature 2°C
 
-This is a particularly demanding refraction case because the apparent altitude is only about **1°45.8′** above the horizon.
+After index correction and dip, SUNSIGHT’s apparent limb altitude Ha is about **1.7632°**, or **1°45.79′**. This is deliberately a demanding low-Sun refraction case.
 
-## The solar calculations are already very close
+## Solar-position comparison
 
-Murdoch’s published intermediate values for Case A are:
+Murdoch’s published Case A values are:
 
-- GHA Sun: **100.3854792°**
-- Declination: **+7.199965171°**
-- Computed altitude Hc: **1.490407896°**
+- GHA Sun: **100.3854792°** = **100°23.1288′**
+- Declination: **+7.199965171°** = **N 7°11.9979′**
+- Computed altitude Hc: **1.490407896°** = **1°29.4245′**
 - Zn: **282.7873074°**
 
-SUNSIGHT gives approximately:
+SUNSIGHT v1.1 gives approximately:
 
-- GHA Sun: **100.3838°**
-- Declination: **+7.2006°**
-- Computed altitude Hc: **1.4917°**
-- Zn: **282.786°**
+- GHA Sun: **100°23.079′**
+- Declination: **N 7°12.015′**
+- Hc: **1°29.463′**
+- Zn: **282.787°**
 
-Expressed in arcminutes, the Hc difference is only about:
+The Hc difference is only about **0.04′**, corresponding to about **0.04 NM** of intercept. The GHA difference is about **0.05′**, and the declination difference about **0.02′**.
 
-**0.08′**
+So the final intercept difference is not primarily an ephemeris effect.
 
-That corresponds to only about **0.08 NM** of intercept.
-
-So the roughly 0.4 NM difference in the final answer is not mainly an ephemeris problem.
-
-## The larger difference is refraction
+## Refraction is the larger difference
 
 Murdoch’s published Case A values include:
 
 - Apparent altitude: **1.763207744°**
 - Refraction correction: **0.346540626°**
 
-The refraction correction is therefore:
+That refraction correction is:
 
 **20.7924′**
 
-SUNSIGHT, using the same pressure and temperature, applies about:
+Using the Case A pressure and temperature, SUNSIGHT v1.1 calculates about:
 
-**21.09′**
+**21.0884′**
 
-of refraction.
+The difference is therefore about:
 
-The difference is approximately:
+**0.296′**
 
-**0.30′**
+That accounts for most of the roughly **0.37 NM** difference in the final intercept.
 
-That alone accounts for most of the difference in the reported intercept.
-
-Murdoch’s program uses the compact Bennett-style refraction expression:
+Murdoch’s compact pressure/temperature refraction expression is:
 
 ```text
 .28P/(Q+273)*.0167/tan(W+7.31/(W+4.4))
 ```
 
-where `W` is apparent altitude, `P` is atmospheric pressure and `Q` is temperature.
+where `W` is apparent altitude, `P` is pressure and `Q` is temperature.
 
-SUNSIGHT uses a refined Bennett formulation. It first calculates the basic Bennett refraction term, applies Bennett’s residual correction, and then applies a more detailed pressure and temperature adjustment.
+SUNSIGHT uses the Bennett base refraction expression, a small residual correction, and a separate pressure/temperature scale factor.
 
-At normal Sun altitudes and ordinary atmospheric conditions, the two approaches differ very little.
-
-Case A exaggerates the difference because all three factors are unfavourable:
+At ordinary Sun altitudes the two treatments differ very little. Case A makes the difference visible because:
 
 - the Sun is very low
 - pressure is relatively high
 - temperature is relatively low
 
-Refraction changes rapidly near the horizon, so a modest difference between correction models becomes visible in the final intercept.
+Refraction changes rapidly near the horizon, so small differences between models become noticeable in the intercept.
 
-## Why SUNSIGHT uses the newer treatment
+## Why Zn is essentially unchanged
 
-Murdoch’s program was remarkably compact and accurate for a TI-81, but it was designed around severe memory and processing limits.
-
-SUNSIGHT has the advantage of more calculator memory and uses later astronomical and refraction methods.
-
-Its solar position calculation is based on more modern algorithms, and its refraction calculation uses a more complete Bennett correction rather than the abbreviated pressure/temperature scaling used in Murdoch’s program.
-
-The important point is that this is not simply extra mathematical complexity for its own sake. Bennett’s refined formulation was developed to reproduce Nautical Almanac-style astronomical refraction more accurately across varying pressure and temperature.
-
-That makes SUNSIGHT’s treatment preferable when the aim is to calculate the standard astronomical correction as accurately as practical on the calculator.
-
-## Why the two programs still agree on Zn
-
-The azimuth is:
+The azimuths are:
 
 - Murdoch: **282.7873°**
-- SUNSIGHT: about **282.786°**
+- SUNSIGHT v1.1: **282.787°**
 
-They are essentially identical.
+They are effectively identical at the precision relevant to plotting.
 
-That is another indication that the sight geometry is not the source of the intercept discrepancy.
+That is consistent with the main difference occurring in the observed-altitude correction rather than in the sight geometry.
 
-The difference occurs after the geometric sight reduction, when the measured sextant altitude is corrected for atmospheric effects.
+## Which answer should be treated as “correct”?
 
-## Is SUNSIGHT’s 11.3 NM answer “more correct”?
+For Case A, it is better not to describe either final intercept as uniquely correct.
 
-In the computational sense, **SUNSIGHT uses the more accurate modern model**.
+SUNSIGHT v1.1 uses a more elaborate refraction treatment than Murdoch’s compact TI-81 implementation, but at an altitude below about 2° the real atmosphere can depart materially from any standard refraction formula. Surface pressure and temperature do not describe the full vertical structure of the atmosphere.
 
-Its ephemeris is generally more accurate than Murdoch’s low-precision solar model, and its refined Bennett refraction treatment is a closer representation of the standard astronomical refraction calculation over varying pressure and temperature.
+The practical interpretation is:
 
-There is, however, an important practical limitation.
+> The two programs agree very closely on the Sun’s geometric position. Their small final-intercept difference is mainly a consequence of different standard refraction models applied to an unusually low sight.
 
-At an altitude below about 2°, real atmospheric refraction can depart noticeably from any standard formula because it depends on the actual vertical temperature structure of the atmosphere, not just the surface pressure and temperature entered into the calculator.
-
-Neither Murdoch nor SUNSIGHT can know that actual atmospheric profile.
-
-So the correct interpretation is:
-
-> SUNSIGHT is using the better computational model, but a very low-altitude sight is inherently less reliable than a higher one.
-
-That is why SUNSIGHT displays its low-Sun caution.
+That is why SUNSIGHT displays the **LOW SUN / USE WITH CAUTION** warning for Case A.
 
 ## Bottom line
 
-Murdoch and SUNSIGHT do **not** materially disagree about where the Sun is in Case A.
+For Case A:
 
-Their computed altitude differs by only about **0.08′**, and their azimuths are essentially identical.
+- Murdoch intercept: **11.7191 NM To**
+- SUNSIGHT v1.1 intercept: **11.354 NM To**, displayed as **11.4 To**
+- intercept difference: about **0.37 NM**
+- Hc difference: about **0.04′**
+- Murdoch refraction: about **20.792′**
+- SUNSIGHT v1.1 refraction: about **21.088′**
+- refraction-model difference: about **0.296′**
+- Zn: essentially identical at **282.8°**
 
-Most of the approximately **0.4 NM** difference in intercept comes from atmospheric refraction:
-
-- Murdoch refraction: about **20.79′**
-- SUNSIGHT refraction: about **21.09′**
-
-SUNSIGHT uses a more complete Bennett pressure/temperature correction and therefore applies about **0.30′** more refraction under the unusual Case A conditions of 1050 mb and 2°C.
-
-That difference is understood, deliberate, and consistent with SUNSIGHT’s use of more modern astronomical and refraction methods.
-
-The remaining caution is physical rather than computational: at such a low Sun altitude, the real atmosphere may not behave exactly like any standard refraction model.
+Case A therefore remains a useful hardware regression test, but it is also a reminder that very-low-altitude sights are dominated by refraction uncertainty rather than ephemeris precision.
