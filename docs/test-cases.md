@@ -22,7 +22,7 @@ The exact v1.1 calculation gives:
 | C | 148°01.781′ | S 0°34.354′ | 75°42.921′ | 89.827° | +13.070 NM |
 | D | 200°37.128′ | S 21°13.864′ | 25°49.612′ | 234.292° | −0.656 NM |
 
-Positive intercept means **To**; negative means **From**.
+Positive intercept means **To**; negative means **From**. For the low-altitude Case A correction difference, see [`case-a-murdoch-vs-sunsight.md`](case-a-murdoch-vs-sunsight.md).
 
 ### Historical USNO comparison
 
@@ -43,7 +43,7 @@ Cases 1–10 are used here as **ephemeris comparisons**. They do not need to be 
 
 The comparison is restricted to **GHA and declination** so differences in refraction and other sight-correction models do not contaminate the ephemeris comparison.
 
-USNO displays GHA and declination to 0.1′. Accordingly, differences around or below 0.05′ are at or below the resolution of the displayed reference.
+USNO displays GHA and declination to 0.1′. Accordingly, differences around or below 0.05′ are at or below the resolution of the displayed reference. USNO's service takes UT1; these tests use the same numerical clock time as SUNSIGHT's UTC input, consistent with SUNSIGHT's deliberate UTC≈UT1 standalone design.
 
 | Case | Date / time | USNO GHA | v1.1 GHA | v1.1 diff | Murdoch diff | USNO Dec | v1.1 Dec | v1.1 diff | Murdoch diff |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
