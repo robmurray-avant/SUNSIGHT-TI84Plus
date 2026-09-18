@@ -60,7 +60,7 @@ The USNO service provides GHA, declination, Hc, Zn and altitude-correction data 
 
 Version 1.1 was hardware-tested on a plain monochrome TI-84 Plus with historical Cases A–D. All four passed.
 
-For the separate modern ephemeris comparison, the exact v1.1 formulas and the reconstructed Murdoch article code were run off-calculator against the same ten USNO cases. Over those ten cases:
+For the separate modern ephemeris comparison, the exact v1.1 formulas and the reconstructed Murdoch article code were run off-calculator against the same ten USNO cases. The Murdoch reconstruction was first checked against the A–D intermediate values printed in the 1996 article. Over the ten modern cases:
 
 - SUNSIGHT v1.1 GHA: **0.044′ mean absolute difference**, **0.145′ maximum**
 - Murdoch GHA: **0.046′ mean absolute difference**, **0.103′ maximum**
