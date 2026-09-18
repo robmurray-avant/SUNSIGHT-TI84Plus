@@ -8,8 +8,6 @@ Ephemeris accuracy update for the **plain monochrome TI-84 Plus**.
 - Retains SUNSIGHT's compact Meeus-style solar model and overall sight-reduction architecture.
 - Adds eight small periodic corrections to true solar longitude, derived from VSOP87D Earth longitude terms, stored in the new dedicated location `L₁(72)`.
 - Expands `L₁` from 71 to 72 elements; no existing list element is repurposed.
-- Uses the TI Connect CE-compatible inverse-trig token glyphs `sin(` and `tan(` in the human-readable source.
-- Preserves the required trailing space after every `Pause ` statement.
 - Hardware-tested on a plain monochrome TI-84 Plus with historical Cases A–D; all four passed.
 - Updated expected historical results: Case A **11.4 To, Zn 282.8°**; B **24.0 To, Zn 5.8°**; C **13.1 To, Zn 89.8°**; D **0.7 From, Zn 234.3°**.
 - In the ten-case 2026–2036 ephemeris comparison, v1.1 mean absolute GHA difference from the displayed USNO values is **0.044′**, maximum **0.145′**; mean absolute declination difference is **0.032′**, maximum **0.063′**.
