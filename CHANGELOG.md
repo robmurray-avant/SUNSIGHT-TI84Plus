@@ -4,6 +4,7 @@
 
 Ephemeris accuracy update for the **plain monochrome TI-84 Plus**.
 
+- Calculator program size: **6,997 bytes**; `.8xp` file size: **7,056 bytes**.
 - Retains SUNSIGHT's compact Meeus-style solar model and overall sight-reduction architecture.
 - Adds eight small periodic corrections to true solar longitude, derived from VSOP87D Earth longitude terms, stored in the new dedicated location `L₁(72)`.
 - Expands `L₁` from 71 to 72 elements; no existing list element is repurposed.
