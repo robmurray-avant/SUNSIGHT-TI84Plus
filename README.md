@@ -110,7 +110,7 @@ Bowditch notes that temperature inversions, fronts, squalls, differences between
 
 National Geospatial-Intelligence Agency, *The American Practical Navigator (Bowditch)*, Pub. No. 9, 2024 edition, Vol. II, §605, “Astronomical Refraction,” p. 250. Official publication page: [https://msi.nga.mil/Publications/APN](https://msi.nga.mil/Publications/APN)
 
-The LOW SUN warning therefore means exactly what it says: the result may still be useful, but it deserves less confidence than a sight taken at a healthier altitude.
+The LOW SUN warning therefore means exactly what it says: the result may still be useful, but it deserves less confidence than a sight taken at a healthier (higher) altitude.
 
 ### SUN NEAR ZENITH — corrected altitude above 87°
 
