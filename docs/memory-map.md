@@ -94,10 +94,10 @@ This table combines the user-entered sight data with the principal calculated va
 | `L₁(5)` | Julian Date, UTC | JD | Julian Date including UTC fraction of day |
 | `L₁(6)` | Decimal year | year | Used to select/evaluate the ΔT polynomial |
 | `L₁(7)` | ΔT polynomial time argument | years | Year offset from the base epoch for the applicable ΔT polynomial |
-| `L₁(8)` | ΔT | seconds | TT − UT approximation |
-| `L₁(9)` | Julian Date, TT | JD | UTC Julian Date corrected by ΔT |
-| `L₁(10)` | Julian centuries TT from J2000.0 | centuries | Time argument for most solar ephemeris calculations |
-| `L₁(11)` | Julian centuries UT from J2000.0 | centuries | Time argument used for sidereal time |
+| `L₁(8)` | ΔT | seconds | TT − UT1 polynomial value; SUNSIGHT uses UTC as the practical UT1 approximation |
+| `L₁(9)` | Approximate Julian Date, TT | JD | UTC Julian Date + ΔT/86400, with UTC treated as UT1 |
+| `L₁(10)` | Julian centuries, approximate TT, from J2000.0 | centuries | Time argument for most solar ephemeris calculations |
+| `L₁(11)` | Julian centuries UTC from J2000.0 | centuries | UTC time argument used as the UT1 approximation for sidereal time |
 | `L₁(12)` | Geometric mean solar longitude, unnormalized | degrees | Meeus solar-longitude intermediate |
 | `L₁(13)` | Geometric mean solar longitude | degrees | Normalized to 0–360° |
 | `L₁(14)` | Solar mean anomaly, unnormalized | degrees | Meeus anomaly intermediate |
