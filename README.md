@@ -21,7 +21,7 @@ The intercept is shown to 0.1 nautical mile and Zn to 0.1°. When applicable, th
 
 ## What this project is
 
-SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The original v1.0 TI-84 Plus release occupied **6,761 bytes on the calculator**. Version 1.1 occupies **6,997 bytes on the calculator** (**7,056 bytes** as the `.8xp` file). Version 1.1 retains the same compact Meeus-style solar model and adds eight small periodic longitude terms derived from VSOP87D to improve the ephemeris without adopting SUNSITE2's larger VSOP87D architecture.
+SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The original v1.0 TI-84 Plus release occupied **6,761 bytes on the calculator**. Version 1.1 occupies **6,997 bytes on the calculator** (**7,056 bytes** as the `.8xp` file). Version 1.1 retains the same compact Meeus-style solar model and adds eight small periodic longitude terms derived from VSOP87D to improve the ephemeris while preserving the program's compact architecture.
 
 SUNSIGHT is an independent modern implementation inspired by Murdoch's TI-81 work. **Murdoch's original program and article are not included in, or licensed under, the SUNSIGHT MIT License. Copyright in those materials remains with their respective rights holders.**
 
@@ -61,7 +61,9 @@ Use **[`SUNSIGHT.8xp`](SUNSIGHT.8xp)** to install the program on the calculator.
 4. Run `SUNSIGHT` from the calculator's program menu.
 5. Run **Case A** below before relying on the installation.
 
-`SUNSIGHT.txt` is provided as a human-readable representation of the tested source, and the annotated files are documentation. For installation, use the released `SUNSIGHT.8xp` file.
+`SUNSIGHT.txt` is provided as a human-readable rendering of the v1.1 program, and the annotated files are documentation. For installation, use the released `SUNSIGHT.8xp` file.
+
+For v1.1.0, the correct `SUNSIGHT.8xp` is **7,056 bytes** and has SHA-256 **`5754b6f24b85d4aca1a5b2dd7a45d2f8f69e62e311aef9b02977539707d0690f`**.
 
 ## Repository contents
 
@@ -72,7 +74,9 @@ Use **[`SUNSIGHT.8xp`](SUNSIGHT.8xp)** to install the program on the calculator.
 - [`docs/INSTALL.md`](docs/INSTALL.md) — installation and acceptance-test instructions.
 - [`docs/test-cases.md`](docs/test-cases.md) — historical Cases A–D plus the ten-case 2026–2036 USNO validation suite.
 - [`docs/memory-map.md`](docs/memory-map.md) — A–Z and `L₁` memory map, user-entered values, diagnostic values, and instructions for inspecting stored data.
+- [`docs/case-a-murdoch-vs-sunsight.md`](docs/case-a-murdoch-vs-sunsight.md) — detailed explanation of the Case A intercept difference between Murdoch and SUNSIGHT v1.1.
 - [`docs/sources.md`](docs/sources.md) — astronomical, refraction, historical and TI references.
+- [`docs/release-v1.1.md`](docs/release-v1.1.md) — v1.1.0 release notes and validation summary.
 - [`docs/original-cruising-world-1996/`](docs/original-cruising-world-1996/) — citation and authorized online links for Murdoch's March 1996 *Cruising World* article. Copyrighted magazine scans are not redistributed here.
 - [`docs/article-1-celestial-navigator.md`](docs/article-1-celestial-navigator.md) — draft article on the program, its development and intended use.
 - [`CHANGELOG.md`](CHANGELOG.md) — public version history.
