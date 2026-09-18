@@ -4,7 +4,7 @@ SUNSIGHT is a Sun-sight reduction program for the **plain monochrome Texas Instr
 
 It is intended as a simple, independent celestial-navigation backup for offshore use. The program was written and tested on the plain TI-84 Plus and is deliberately limited to the Sun.
 
-**Current release: v1.0.0 — 2026-09-16**
+**Release branch: v1.1.0 — 2026-09-18**
 
 Enter the sight data and SUNSIGHT returns the two values normally needed to plot a line of position, with any applicable caution on the same screen:
 
@@ -21,11 +21,11 @@ The intercept is shown to 0.1 nautical mile and Zn to 0.1°. When applicable, th
 
 ## What this project is
 
-SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The present TI-84 Plus version occupies **6,761 bytes on the calculator** and spends the extra capacity on a Meeus-based solar ephemeris, ΔT handling, refined refraction, input checking, clearer prompts and numerical safeguards.
+SUNSIGHT is a modern rewrite of the idea behind William S. **Murdoch's** 1996 TI-81 Sun-sight program. Murdoch fitted a complete Sun ephemeris and sight-reduction system into **2,259 bytes**. The original v1.0 TI-84 Plus release occupied **6,761 bytes on the calculator**. Version 1.1 retains the same compact Meeus-style solar model and adds eight small periodic longitude terms derived from VSOP87D to improve the ephemeris without adopting SUNSITE2's larger VSOP87D architecture.
 
 SUNSIGHT is an independent modern implementation inspired by Murdoch's TI-81 work. **Murdoch's original program and article are not included in, or licensed under, the SUNSIGHT MIT License. Copyright in those materials remains with their respective rights holders.**
 
-The current program has been checked against the four historical examples supplied with Murdoch's article and against a separate ten-case 2026–2036 U.S. Naval Observatory validation suite. Across Cases A–D, the largest difference in calculated altitude Hc was about **0.10 minute of arc**, and the largest difference in Zn was about **0.03°**. Across the ten modern cases, the largest differences from the USNO displayed values were about **0.47′ in GHA, 0.20′ in declination, 0.50′ in Hc and 0.05° in Zn**. The largest difference in displayed net sight correction was about **0.12′**.
+Version 1.1 was hardware-tested on a plain monochrome TI-84 Plus with historical Cases A–D; all four completed successfully. For ephemeris validation, the exact v1.1 formulas were also run off-calculator against a ten-case 2026–2036 USNO set and against the reconstructed Murdoch article code. Across those ten modern cases, v1.1's mean absolute GHA difference from the displayed USNO values was **0.044′**, with a maximum of **0.145′**; mean absolute declination difference was **0.032′**, with a maximum of **0.063′**. Murdoch's corresponding figures were **0.046′ / 0.103′** for GHA and **0.022′ / 0.048′** for declination. USNO displays these quantities to 0.1′, so differences of only a few hundredths of an arcminute should not be over-interpreted.
 
 Supported dates are **1900 through 2049**.
 
@@ -37,8 +37,8 @@ One minute of error in calculated altitude corresponds to approximately one naut
 
 | Method | Ephemeris / solar-position performance | Approximate ephemeris contribution to intercept error | Representative practical accuracy of a good small-boat Sun sight |
 |---|---:|---:|---:|
-| **Murdoch TI-81** | based on a **~1′-class low-precision solar formulation**; individual cases can be substantially better | about **≤1 NM** | roughly **1–2 NM** |
-| **SUNSIGHT** | typically **a few tenths of an arcminute** in the validation set; maximum tested Hc difference about **0.50′** in the modern USNO suite | about **0.2–0.5 NM** | roughly **1–2 NM** |
+| **Murdoch TI-81** | about **0.05′ mean GHA difference** in the 10-case modern USNO comparison; **0.103′ maximum** | roughly **0.1 NM class** in that comparison | roughly **1–2 NM** |
+| **SUNSIGHT v1.1** | about **0.044′ mean GHA difference** in the same 10 cases; **0.145′ maximum**; broad 1900–2049 numerical testing gives about **0.059′ RMS GHA** | roughly **0.1–0.2 NM class** | roughly **1–2 NM** |
 | **Standard Nautical Almanac method** | hourly Sun GHA and declination tabulated to **0.1′**; **Increments and Corrections** carry GHA to the sight minute/second and **d** interpolates declination | generally about **0.1 NM or less** from the tabular calculation | roughly **1–2 NM** |
 
 The comparison is deliberately approximate. It is intended to show scale, not to imply that every sight will fall inside those bands or that **1–2 NM** is a guaranteed error envelope. A very good observer in settled conditions may do better; rough seas, a poor horizon or low altitude can make the result substantially worse.
@@ -47,9 +47,9 @@ The comparison is deliberately approximate. It is intended to show scale, not to
 
 The standard *Nautical Almanac* remains the authoritative navigational reference. Its hourly Sun GHA and declination are published to **0.1′**. For a sight between whole hours, the navigator uses the **Increments and Corrections** tables to carry GHA to the exact minute and second of UTC and applies the **d correction** to interpolate declination.
 
-**The practical lesson:** Murdoch's program was already capable of useful marine celestial navigation. SUNSIGHT improves the astronomical calculation substantially, but the final real-world LOP does not improve by the same amount because observational and atmospheric errors dominate.
+**The practical lesson:** Murdoch's program was already capable of useful marine celestial navigation. SUNSIGHT v1.1 brings its compact Meeus-style ephemeris into roughly the same practical accuracy class as Murdoch's remarkably efficient 1996 implementation, while retaining SUNSIGHT's modern input handling, corrections and safeguards. The final real-world LOP still does not improve by the same amount because observational and atmospheric errors dominate.
 
-That is the practical reason SUNSIGHT does not need a much more elaborate ephemeris to be useful offshore.
+That is the practical reason v1.1 stops at a small eight-term longitude correction rather than replacing SUNSIGHT's simple architecture with a much larger planetary theory.
 
 ## Download and install
 
@@ -154,11 +154,11 @@ Enter:
 - Pressure: **1050 mb/hPa**
 - Temperature: **2 °C**
 
-Expected result:
+Expected v1.1 result:
 
 ```text
 Sun sight
-Int NM 11.3 To
+Int NM 11.4 To
 Zn   282.8
 
 LOW SUN
