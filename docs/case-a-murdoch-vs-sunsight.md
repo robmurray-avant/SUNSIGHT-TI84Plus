@@ -1,6 +1,6 @@
 # Why Murdoch and SUNSIGHT Differ on Case A
 
-Case A from William S. Murdoch’s 1996 *Cruising World* article is a useful validation case because Murdoch’s program and SUNSIGHT agree very closely on the Sun’s direction, yet they produce noticeably different intercepts.
+Astute observers will have noticed Case A from William S. Murdoch’s 1996 *Cruising World* article varies in its' answer from SUNSIGHT. Case A is a useful validation case because Murdoch’s program and SUNSIGHT agree very closely on the Sun’s direction, yet they produce noticeably different intercepts.
 
 Murdoch reports:
 
