@@ -1,8 +1,8 @@
 # Installing SUNSIGHT on a plain TI-84 Plus
 
-SUNSIGHT v1.0.0 was written and tested on the **plain monochrome Texas Instruments TI-84 Plus**.
+SUNSIGHT v1.1.0 was written and tested on the **plain monochrome Texas Instruments TI-84 Plus**.
 
-The preferred installation file is [`SUNSIGHT.8xp`](../SUNSIGHT.8xp). The released program occupies **6,761 bytes on the calculator** and installs under the program name `SUNSIGHT`. Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` into the calculator unless you specifically understand and intend to deal with TI-BASIC tokenization details.
+Version 1.1 installs under the program name `SUNSIGHT`. The final v1.1 `.8xp` must be rebuilt from the tested source before the v1.1 tag/release is published; the v1.0 binary must not be relabelled as v1.1. Do not use the annotated files for installation, and do not paste `SUNSIGHT.txt` unless you specifically intend to deal with TI-BASIC tokenization details.
 
 ## Installation
 
@@ -30,7 +30,7 @@ Expected result:
 
 ```text
 Sun sight
-Int NM 11.3 To
+Int NM 11.4 To
 Zn   282.8
 
 LOW SUN
@@ -49,6 +49,6 @@ The program accepts years **1900 through 2049**.
 
 ## Notes about the text source
 
-`SUNSIGHT.txt` is provided so the tested TI-BASIC source can be inspected and documented. TI-BASIC pasted through an editor can be altered by tokenization, Unicode substitutions, whitespace handling and visually similar characters. The `.8xp` file avoids those problems and should be used for normal installation.
+`SUNSIGHT.txt` is provided so the tested TI-BASIC source can be inspected and documented. In v1.1 the human-readable source deliberately uses the TI Connect CE-compatible private-use inverse-trig glyph `` in `sin(` and `tan(`, literal `L₁`, literal `√`, and a trailing space after every `Pause `. Unicode substitution, whitespace cleanup or editor normalization can break tokenization. The final `.8xp` remains the preferred installation format.
 
 If you encounter a problem, open a GitHub issue and include the SUNSIGHT version, calculator model, all inputs, expected result if known, actual result, and whether Case A passes on the same calculator.
