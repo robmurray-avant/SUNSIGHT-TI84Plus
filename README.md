@@ -33,19 +33,21 @@ Supported dates are **1900 through 2049**.
 
 It is useful to separate **ephemeris accuracy** from the accuracy of the final plotted line of position.
 
-One minute of altitude corresponds to approximately one nautical mile along the intercept direction. But once ephemeris error is below a few tenths of an arcminute, the dominant errors in a real marine sight are usually the sight itself: sextant reading, horizon quality, vessel motion, exact timing, index error, dip and atmospheric refraction.
+One minute of error in calculated altitude corresponds to approximately one nautical mile of intercept error. But once ephemeris error is below a few tenths of an arcminute, the dominant errors in a real marine sight are usually the sight itself: sextant reading, horizon definition, vessel motion, exact timing, index error, dip and atmospheric refraction.
 
-| Method | Ephemeris / solar-position accuracy | Typical contribution to LOP error | Practical Sun LOP from a good small-boat sight |
+| Method | Ephemeris / solar-position performance | Approximate ephemeris contribution to intercept error | Representative practical accuracy of a good small-boat Sun sight |
 |---|---:|---:|---:|
-| **Murdoch TI-81** | about **1′ class** overall, often better in individual cases | about **≤1 NM** | about **1–2 NM** |
-| **SUNSIGHT** | about **0.2–0.5′ class** in documented testing | about **0.2–0.5 NM** | about **1–2 NM** |
-| **Standard Nautical Almanac method** | Sun GHA and declination published to **0.1′**; underlying ephemeris is better | about **0.1 NM or less** from the tabulated ephemeris itself | about **1–2 NM** |
+| **Murdoch TI-81** | based on a **~1′-class low-precision solar formulation**; individual cases can be substantially better | about **≤1 NM** | roughly **1–2 NM** |
+| **SUNSIGHT** | typically **a few tenths of an arcminute** in the validation set; maximum tested Hc difference about **0.50′** in the modern USNO suite | about **0.2–0.5 NM** | roughly **1–2 NM** |
+| **Standard Nautical Almanac method** | hourly Sun GHA and declination tabulated to **0.1′**; **Increments and Corrections** carry GHA to the sight minute/second and **d** interpolates declination | generally about **0.1 NM or less** from the tabular calculation | roughly **1–2 NM** |
 
-The comparison is deliberately approximate. It is intended to show scale, not to imply that every sight will fall inside those bands.
+The comparison is deliberately approximate. It is intended to show scale, not to imply that every sight will fall inside those bands or that **1–2 NM** is a guaranteed error envelope. A very good observer in settled conditions may do better; rough seas, a poor horizon or low altitude can make the result substantially worse.
 
-Murdoch's program was already good enough to make practical Sun sights useful. SUNSIGHT improves the astronomical calculation substantially, but the final real-world LOP does not improve by the same amount because observational and atmospheric errors dominate.
+**Why the two accuracy columns are so different:** the final LOP contains more than ephemeris error. It also contains observational error from the sextant reading, horizon definition, vessel motion, timing, dip, index error and atmospheric refraction. Once the ephemeris is accurate to a few tenths of an arcminute, those other errors usually dominate.
 
-The standard *Nautical Almanac* remains the authoritative navigational reference. Its published Sun GHA and declination are given to **0.1′**, already finer than most hand-held marine sextant work can exploit.
+The standard *Nautical Almanac* remains the authoritative navigational reference. Its hourly Sun GHA and declination are published to **0.1′**. For a sight between whole hours, the navigator uses the **Increments and Corrections** tables to carry GHA to the exact minute and second of UTC and applies the **d correction** to interpolate declination.
+
+**The practical lesson:** Murdoch's program was already capable of useful marine celestial navigation. SUNSIGHT improves the astronomical calculation substantially, but the final real-world LOP does not improve by the same amount because observational and atmospheric errors dominate.
 
 That is the practical reason SUNSIGHT does not need a much more elaborate ephemeris to be useful offshore.
 
