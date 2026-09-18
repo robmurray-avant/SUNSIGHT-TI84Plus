@@ -39,7 +39,7 @@ Maximum absolute displayed-value differences across A–D are about **0.17′ GH
 
 ## Modern ephemeris suite — 2026–2036
 
-Cases 1–10 are used here as **ephemeris comparisons**. They do not need to be run through the normal calculator sight-entry UI. The exact SUNSIGHT v1.1 ephemeris formulas are evaluated off-calculator, and Murdoch's values are produced by running the reconstructed code from his published article.
+Cases 1–10 are used here as **ephemeris comparisons**. They do not need to be run through the normal calculator sight-entry UI. The exact SUNSIGHT v1.1 ephemeris formulas are evaluated off-calculator, and Murdoch's values are produced by running the reconstructed code from his published article. Before using that reconstruction for the modern cases, it was checked against Murdoch's published A–D intermediate ephemeris and sight-geometry values.
 
 The comparison is restricted to **GHA and declination** so differences in refraction and other sight-correction models do not contaminate the ephemeris comparison.
 
