@@ -16,7 +16,7 @@ https://www.starpath.com/foundation/NN-vol-2.pdf
 
 Murdoch's published explanation cites Van Flandern and Pulkkinen, **“Low Precision Formulae for Planetary Positions,” _The Astrophysical Journal Supplement Series_, vol. 41, p. 391 (1979)**, and notes that the formulae were put into the form used by B. Emerson in **N.A.O. Technical Note No. 47 — Approximate Solar Coordinates**, Her Majesty's Nautical Almanac Office, November 1978. Murdoch also cited Montenbruck and Pfleger, **_Astronomy on the Personal Computer_**, Springer-Verlag, 1991.
 
-Murdoch reported a **2,259-byte TI-81 program**. SUNSIGHT v1.0 occupied **6,761 bytes on the calculator**. The v1.1 calculator byte count should be recorded from the rebuilt `.8xp` rather than inferred from text length. The two calculators use different tokenization and storage architectures, so byte counts are useful context rather than a precise measure of algorithmic complexity.
+Murdoch reported a **2,259-byte TI-81 program**. SUNSIGHT v1.0 occupied **6,761 bytes on the calculator**. SUNSIGHT v1.1 occupies **6,997 bytes on the calculator**; its `.8xp` file is **7,056 bytes**. The two calculators use different tokenization and storage architectures, so byte counts are useful context rather than a precise measure of algorithmic complexity.
 
 ## Solar position
 
