@@ -29,17 +29,6 @@ The new correction is stored only in `L₁(72)`; existing list meanings are unch
 
 USNO displays GHA/declination to 0.1′, so differences of only a few hundredths of an arcminute are at or below the resolution of the displayed reference.
 
-## Tokenization
-
-The tested text source uses:
-
-- `sin(` and `tan(` for inverse trig
-- literal `L₁`
-- literal `√`
-- a trailing space after every `Pause `
-
-Do not normalize or substitute these characters when creating the TI-BASIC program.
-
 ## Release binary
 
-The supplied v1.1 `SUNSIGHT.8xp` was built from the tested v1.1 source. It occupies **6,997 bytes on the calculator** and **7,056 bytes as a file**. The uploaded filename suffix `(4)` is not part of the release name; the repository file is `SUNSIGHT.8xp`.
+The released `SUNSIGHT.8xp` was built from the tested v1.1 source and is the recommended installation file. It occupies **6,997 bytes on the calculator** and **7,056 bytes as a file**.
