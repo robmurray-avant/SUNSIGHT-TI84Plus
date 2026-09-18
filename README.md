@@ -43,6 +43,8 @@ One minute of error in calculated altitude corresponds to approximately one naut
 
 The comparison is deliberately approximate. It is intended to show scale, not to imply that every sight will fall inside those bands or that **1–2 NM** is a guaranteed error envelope. A very good observer in settled conditions may do better; rough seas, a poor horizon or low altitude can make the result substantially worse.
 
+The ephemeris figures compare the algorithms at the same numerical clock time. SUNSIGHT deliberately accepts UTC and treats it as the practical approximation to UT1; it does not require a DUT1 input. Any UTC–UT1 difference is therefore an additional small timing contribution, separate from the solar-model differences tabulated here.
+
 **Why the two accuracy columns are so different:** the final LOP contains more than ephemeris error. It also contains observational error from the sextant reading, horizon definition, vessel motion, timing, dip, index error and atmospheric refraction. Once the ephemeris is accurate to a few tenths of an arcminute, those other errors usually dominate.
 
 The standard *Nautical Almanac* remains the authoritative navigational reference. Its hourly Sun GHA and declination are published to **0.1′**. For a sight between whole hours, the navigator uses the **Increments and Corrections** tables to carry GHA to the exact minute and second of UTC and applies the **d correction** to interpolate declination.
