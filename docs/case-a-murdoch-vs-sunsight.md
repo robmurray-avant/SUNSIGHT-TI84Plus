@@ -80,6 +80,20 @@ Murdoch’s compact pressure/temperature refraction expression is:
 
 where `W` is apparent altitude, `P` is pressure and `Q` is temperature.
 
+SUNSIGHT’s less compact pressure/temperature refraction expression is:
+
+```text
+1/tan(L₁(53)+7.31/(L₁(53)+4.4))→L₁(54)
+0-.06sin(14.7L₁(54)+13)→L₁(55)
+L₁(54)+L₁(55)→L₁(56)
+((N-80)/930)/(1+.00008(L₁(54)+39)(O-10))→L₁(57)
+L₁(56)L₁(57)→L₁(58)
+L₁(58)/60→L₁(59)
+L₁(53)-L₁(59)→L₁(60)
+```
+
+where `L₁(53)` is apparent altitude after index correction and dip, `N` is pressure in mb/hPa, `O` is temperature in °C, `L₁(58)` is the refraction correction in arcminutes, and `L₁(60)` is altitude after refraction.
+
 SUNSIGHT uses the Bennett base refraction expression, a small residual correction, and a separate pressure/temperature scale factor.
 
 At ordinary Sun altitudes the two treatments differ very little. Case A makes the difference visible because:
