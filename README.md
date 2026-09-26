@@ -2,7 +2,7 @@
 
 SUNSIGHT is a Sun-sight reduction program for the **plain monochrome Texas Instruments TI-84 Plus**.
 
-It is intended as a simple, independent celestial-navigation backup for offshore use. The program was written and tested on the plain TI-84 Plus and is deliberately limited to the Sun.
+It is intended as a simple, independent celestial-navigation backup for offshore use. The program was written and tested on the plain TI-84 Plus (firmware version v2.55M) and is deliberately limited to the Sun. It *may* run on other TI-8*X* series calculators (TI-83s, TI-84 CEs, TI-89s, etc.) but has only been tested on the **plain monochrome Texas Instruments TI-84 Plus**.
 
 **Current release: v1.1.0 — 2026-09-18**
 
