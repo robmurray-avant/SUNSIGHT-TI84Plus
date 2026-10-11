@@ -95,8 +95,8 @@ SUNSIGHT asks for:
 - lower or upper limb
 - index error, on or off the arc
 - height of eye in metres
-- atmospheric pressure in mb/hPa
-- temperature in °C
+- atmospheric pressure in mb/hPa (if unknown, use 1010mb/hPa as default value)
+- temperature in °C (if unknown, use 10°C as default value)
 
 North/South, East/West, limb and index-error direction are entered as numbered choices to reduce the chance of sign mistakes.
 
